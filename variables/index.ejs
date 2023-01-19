@@ -1,0 +1,5998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whole doc</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+    <!-- internal styling  -->
+    <style>
+      /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+      body {
+        font-family: "Numbers", "Roboto", sans-serif !important;
+      }
+
+      .wrapper {
+        margin: 40px 60px;
+        margin-bottom: 60px;
+        /*  page-break-before: always; */
+      }
+
+      .top-header {
+        color: #000000;
+        font-size: 22px;
+      }
+
+      .header-divs {
+        width: 33.33%;
+      }
+
+      /* SECOND HEADER DIV  */
+      .second-header-div {
+        text-align: right;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .water-resource-status {
+        color: #5fbfbf;
+        font-size: 36px;
+        margin-right: 20px;
+        font-weight: 600;
+      }
+
+      .village-name {
+        color: #1b4b64;
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .village-month {
+        background-color: #6d97ae;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        margin-top: 10px;
+        padding: 5px 6px;
+      }
+
+      /* third-bottom-div */
+
+      .third-bottom-div {
+        margin-top: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .brown-box-wrapper {
+        /* background-color: green; */
+        width: 48.5% /* width: 100%; */;
+      }
+
+      .brown-box {
+        background-color: #a9725b;
+        min-width: 300px;
+        width: 300px;
+        color: #ffffff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        padding: 6px 3px;
+      }
+
+      .monthly-water-report {
+        color: #9ea38e;
+      }
+
+      /* fouth-images-box */
+      .fouth-images-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 40px;
+      }
+
+      .img1 {
+        width: 30%;
+        background: #d9d9d9;
+        margin-right: 10px;
+        height: 300px;
+      }
+      .img2 {
+        width: 50%;
+        background: #d9d9d9;
+        margin-right: 10px;
+      }
+      .img3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 20%;
+        background: #fff;
+        border: 5px solid #000000;
+        padding: 4px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      /* FIRST ENDS ---------------*/
+
+      /* SECOND STARTS */
+
+      body {
+        font-family: "Numbers", "Roboto", sans-serif !important;
+      }
+
+      /* --------------- page number styling --------------  */
+
+      .pageNoContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        /* background-color: red; */
+      }
+
+      .pageNoBottom {
+        width: 33.333%;
+        background: "";
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .pageNoVillClus {
+        width: 180px;
+        background: #c6dcda;
+        text-align: center;
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .pageNoDec {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 30px;
+        margin-left: 15px;
+      }
+
+      .pageNoCopyright {
+        width: 33.333%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .pageNoCurrent {
+        width: 33.333%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      /* PAGE NUMBER STYLING ENDS */
+
+      /* for grid  */
+      .grid {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+      }
+
+      /* 2 */
+      .container-grid {
+        width: calc(100% + 24px);
+        margin-left: -24px;
+
+        margin-top: -24px;
+
+        -webkit-box-sizing: border-box;
+
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+      }
+
+      /* 3 */
+      .item-grid {
+        padding-left: 24px;
+
+        padding-top: 24px;
+        -ms-flex-preferred-size: 33.333333%;
+        flex-basis: 33.333333%;
+        -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        max-width: 33.333333%;
+
+        -webkit-box-sizing: border-box;
+
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      /* 4 */
+      .item {
+        /* -webkit-flex-basis: 33.333333%;
+    -ms-flex-preferred-size: 33.333333%;
+    flex-basis: 33.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 33.333333%;
+
+
+    padding-left: 24px;
+    padding-top:24px; */
+
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.87);
+        -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        -webkit-transition: -webkit-box-shadow 300ms
+          cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        -o-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+          -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+          0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+        box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+          0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+        background-color: #fff;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        letter-spacing: 0.01071em;
+        padding: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        min-height: 200px;
+        color: #2a7c78;
+        height: 550px;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        padding: 0px;
+      }
+
+      /* FIRST ONE WHICH HAS ALL THE CONTAINERS INSIDE  (1) */
+      .box {
+        -webkit-box-flex: 1;
+        /* -webkit-flex-grow: 1; */
+        -ms-flex-positive: 1;
+        /* flex-grow: 1; */
+      }
+
+      /* FOR SECOND ONE STYLING  */
+
+      .wrapper-two {
+        /* background-color: green; */
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      .population-amount {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .pop-name {
+        font-size: 13.5px;
+      }
+
+      .four-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .four-header-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 13px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 60%;
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 19px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+
+      /* SECOND ENDS */
+
+      /* THIRD STARTS */
+      .wrapper-third {
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      /* ${"" PAGE NUMBER STYLING STARTS } */
+
+      .pageNoContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .pageNoBottom {
+        width: 33.333%;
+        background: "";
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .pageNoVillClus {
+        width: 180px;
+        background: #c6dcda;
+        text-align: center;
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .pageNoDec {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 30px;
+        margin-left: 15px;
+      }
+
+      .pageNoCopyright {
+        width: 33.333%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .pageNoCurrent {
+        width: 33.333%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      /* ${"" PAGE NUMBER STYLING ENDS} */
+
+      /* ${"" NEW ONES } */
+
+      .four-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ${"" --------------------------} */
+
+      .four-header-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 13px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 60%;
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+      /* THIRD ENDS */
+
+      /* FOURTH STARTS */
+
+      .wrapper-four {
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      /* ${"" NEW ONES } */
+
+      .four-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ${"" --------------------------} */
+
+      .four-header-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 13px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      /* ${"" NEW ONES } */
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        /* ${"" background: yellow;} */
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 60%;
+
+        /* ${"" background: red;} */
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        /* ${"" background: red;} */
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+      /* FOURTH ENDS */
+
+      /* FIFTH STARTS */
+
+      .wrapper-five {
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      /* ${"" NEW ONES } */
+
+      .four-header {
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ${"" ----------------/----------} */
+
+      .four-header-second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      /* ${"" NEW ONES } */
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* ${"" background: yellow;} */
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+
+      /* FIFTH ENDS */
+
+      /* SIXTH STARTS */
+
+      .wrapper-six {
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      .four-header {
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ${"" --------------------------} */
+
+      .four-header-second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+      /* SIXTH ENDS */
+
+      /* SEVENTH STARTS */
+
+      .wrapper-seven {
+        margin: 25px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      .four-header {
+        display: flex;
+        color: #287c78;
+        margin-bottom: 20px;
+      }
+
+      .mr-right {
+        margin-right: 30px;
+      }
+
+      .heading-water {
+        margin-bottom: 10px;
+      }
+
+      .tcm-water {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .heading-area {
+        margin-bottom: 10px;
+      }
+
+      .ha-area {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ${"" --------------------------} */
+
+      .four-header-second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .content-row-second {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .bar-represents {
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        font-size: 13px;
+      }
+
+      .bar-represents-two {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+      }
+
+      .circle {
+        width: 19px;
+        height: 19px;
+        border-radius: 100%;
+        background-color: #3796ca;
+        margin-right: 8px;
+      }
+
+      .green {
+        background-color: #287c78;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+
+      /* SEVENTH ENDS */
+
+      /* EIGHTTH STARTS */
+
+      .wrapper-eight {
+        margin: 40px 60px;
+        margin-bottom: 60px;
+        page-break-before: always;
+      }
+
+      /* ${"" PAGE NUMBER STYLING STARTS } */
+
+      .pageNoContainer {
+        display: flex;
+      }
+
+      .pageNoBottom {
+        width: 33.333%;
+        background: "";
+        display: flex;
+      }
+
+      .pageNoVillClus {
+        width: 180px;
+        background: #c6dcda;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pageNoDec {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-left: 15px;
+      }
+
+      .pageNoCopyright {
+        width: 33.333%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pageNoCurrent {
+        width: 33.333%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 24px;
+        /* ${"" background: red;} */
+      }
+
+      /* ${"" PAGE NUMBER STYLING ENDS} */
+
+      .mt-15 {
+        margin-top: 15px;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* ${"" background: yellow;} */
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+
+        /* ${"" background: red;} */
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .brown {
+        margin: 10px 0;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+
+      /* EIGHTTH ENDS */
+
+      /* NINTH STARTS */
+
+      /*.wrapper-eight{
+  margin: 40px 60px;
+}*/
+
+      /* ${"" PAGE NUMBER STYLING STARTS } */
+
+      .pageNoContainer {
+        display: flex;
+      }
+
+      .pageNoBottom {
+        width: 33.333%;
+        background: "";
+        display: flex;
+      }
+
+      .pageNoVillClus {
+        width: 180px;
+        background: #c6dcda;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pageNoDec {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-left: 15px;
+      }
+
+      .pageNoCopyright {
+        width: 33.333%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pageNoCurrent {
+        width: 33.333%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 24px;
+        /* ${"" background: red;} */
+      }
+
+      /* ${"" PAGE NUMBER STYLING ENDS} */
+
+      .mt-15 {
+        margin-top: 15px;
+      }
+
+      .water-balance-heading {
+        margin-bottom: 15px;
+      }
+
+      .water-balance-heading h3 {
+        font-size: 24px;
+      }
+
+      .center-aligned-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* ${"" background: yellow;} */
+      }
+
+      .plus-icon {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+
+        /* ${"" background: red;} */
+      }
+
+      .plus-icon img {
+        height: 15px;
+      }
+
+      .brown {
+        margin: 10px 0;
+      }
+
+      .image-div {
+        text-align: center;
+      }
+
+      .supply-text,
+      .demand-text,
+      .water-balance-text {
+        color: #2a7c78;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .demand-text {
+        color: #77402b;
+      }
+
+      .water-balance-text {
+        color: #646464;
+      }
+
+      .begining-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .tcm-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .water-tcm {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .type-of-water {
+        font-size: 17px;
+      }
+
+      .image-parent-div {
+        width: 150px;
+      }
+
+      .contents-section {
+        min-width: 150px;
+      }
+
+      .mainBoxForBorder::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 98%;
+        border-bottom: 2px solid #000000;
+      }
+      /* NINTH ENDS */
+    </style>
+    <!-- internal styling  -->
+  </head>
+  <body>
+    <!-- FIRST PAGE STARTS  -->
+
+    <div class="wrapper">
+      <div class="top-header" style="display: flex; align-items: center">
+        <div class="header-divs">
+          <!-- <img src="images/CompanyLogo.png" alt="Ekatvam" height="40px" /> -->
+          <img src="<%= ekatvam_logo %>" alt="Ekatvam" height="40px" />
+        </div>
+        <div class="header-divs">
+          <div style="text-align: center">Ekatvam Innovation presents,</div>
+        </div>
+      </div>
+
+      <div class="second-header-div">
+        <div class="water-resource-status">
+          Water Resource <br />
+          Status of
+        </div>
+        <div>
+          <div class="village-name" style="text-transform: uppercase">
+            <!-- KUNDALIYARA -->
+            <%= village %>
+          </div>
+          <div class="village-month" style="text-transform: uppercase">
+            <!-- DECEMBER 2022 -->
+            <%= current_month %> <%= current_year %>
+          </div>
+        </div>
+      </div>
+
+      <div class="third-bottom-div">
+        <div class="brown-box-wrapper">
+          <div class="brown-box">
+            <div>
+              Season - <br />
+              <span style="margin-left: 7px; text-transform: uppercase">
+                <!-- KHARIF -->
+                <%= current_season %>
+              </span>
+            </div>
+            <div>
+              Taluka - <br />
+              <span style="margin-left: 7px; text-transform: uppercase">
+                <!-- RAJULA -->
+                <%= current_taluka %>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="monthly-water-report">
+          Our Village’s detailed monthly water report
+        </div>
+      </div>
+
+      <div class="fouth-images-box">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3">
+          <div>
+            <div style="margin-bottom: 25px; font-size: 18px; margin-top: 10px">
+              Collaboration with -
+            </div>
+            <div>
+              <!-- <img src="images/CSPC.png" alt="Client Logo" height="65px" /> -->
+              <img
+                src="<%= collaboration_image %>"
+                alt="Client Logo"
+                height="60px"
+              />
+            </div>
+            <div style="margin-top: 15px; text-align: center">
+              <!-- <img src="images/plus.png" alt="and" height="20px" /> -->
+              <img src="<%= plus_image %>" alt="and" height="20px" />
+            </div>
+            <div style="margin-top: 15px; text-align: center">
+              <!-- <img src="images/Midas.png" alt="midas" height="80px" /> -->
+              <img src="<%= midas_image %>" alt="midas" height="80px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIRST PAGE ENDS  -->
+
+    <!-- SECOND PAGE STARTS  -->
+    <div class="wrapper-two">
+      <div class="water-balance-heading">
+        <h3>Know our Village Demographics.</h3>
+      </div>
+
+      <div class="box mainBoxForBorder">
+        <div class="container-grid">
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                color: #2a7c78;
+                height: 550px;
+                box-shadow: unset;
+                padding: 0;
+              "
+            >
+              <div>
+                <div class="supply-text">Village Population</div>
+
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    align-items: flex-end;
+                    padding: 0 20px;
+                  "
+                >
+                  <div style="text-align: center">
+                    <div>
+                      <!-- <img
+                          src="/images//humans.svg"
+                          alt="humans"
+                          height="40px"
+                        /> -->
+                      <img alt="humans" height="40px" src="<%= humans %>" />
+                    </div>
+                    <div class="population-amount">
+                      <!-- 1234 -->
+                      <%= village_population_humans %>
+                    </div>
+                    <div class="pop-name">Humans</div>
+                  </div>
+                  <div style="text-align: center">
+                    <div>
+                      <!-- <img
+                          src="/images//cattle.svg"
+                          alt="humans"
+                          height="30px"
+                        /> -->
+
+                      <img alt="cattle" height="30px" src="<%= cattle %>" />
+                    </div>
+                    <div class="population-amount">
+                      <%= village_population_cattle %>
+                    </div>
+                    <div class="pop-name">Cattle</div>
+                  </div>
+                  <div style="text-align: center">
+                    <div>
+                      <!-- <img src="/images/sheep.svg" alt="humans" height="30px" /> -->
+                      <img alt="sheep" height="30px" src="<%= sheep %>" />
+                    </div>
+                    <div class="population-amount">
+                      <%= village_population_sheep %>
+                    </div>
+                    <div class="pop-name">Sheep</div>
+                  </div>
+                  <div style="text-align: center">
+                    <div>
+                      <!-- <img
+                          src="/images/poultry.svg"
+                          alt="humans"
+                          height="35px"
+                        /> -->
+
+                      <img alt="poultry" height="35px" src="<%= poultry %>" />
+                    </div>
+                    <div class="population-amount">
+                      <%= village_population_poultry %>
+                    </div>
+                    <div class="pop-name">Poultry</div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 35px">
+                  <div class="supply-text">Temperature</div>
+
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 25px;
+                      align-items: flex-end;
+                      padding: 0 30px;
+                      width: 70%;
+                    "
+                  >
+                    <div style="text-align: center">
+                      <div>
+                        <!-- <img
+                            src="/images//temperature.svg"
+                            alt="humans"
+                            height="40px"
+                          /> -->
+
+                        <img
+                          alt="temperature"
+                          height="40px"
+                          src="<%= temperature %>"
+                        />
+                      </div>
+                    </div>
+
+                    <div style="text-align: center">
+                      <div
+                        style="
+                          position: relative;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <!-- 12 -->
+                        <%= minimum_temperature %>
+                        <span
+                          style="
+                            font-size: 10px;
+                            position: relative;
+                            top: -10px;
+                            letter-spacing: 2px;
+                          "
+                        >
+                          o
+                        </span>
+                        C
+                      </div>
+
+                      <div class="pop-name">Minimum</div>
+                    </div>
+
+                    <div style="text-align: center">
+                      <div
+                        style="
+                          font-size: 22px;
+                          position: relative;
+                          font-weight: bold;
+                        "
+                      >
+                        <!-- 12 -->
+                        <%= maximum_temperature %>
+                        <span
+                          style="
+                            font-size: 10px;
+                            position: relative;
+
+                            top: -10px;
+                            letter-spacing: 2px;
+                          "
+                        >
+                          o
+                        </span>
+                        C
+                      </div>
+
+                      <div class="pop-name">Maximum</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 25px">
+                  <div class="supply-text">Wind Speed</div>
+
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 25px;
+                      align-items: center;
+                      padding: 0 20px;
+                      width: 50%;
+                    "
+                  >
+                    <div style="text-align: center">
+                      <div>
+                        <!-- <img
+                            src="/images/windSpeed.svg"
+                            alt="humans"
+                            height="35px"
+                          /> -->
+                        <img
+                          alt="wind speed"
+                          height="35px"
+                          src="<%= wind_speed_img %>"
+                        />
+                      </div>
+                    </div>
+
+                    <div
+                      style="
+                        text-align: center;
+                        font-size: 22px;
+                        font-weight: bold;
+                      "
+                    >
+                      <div><%= wind_speed %> Km/hr</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- {/* unit conv starts  */} -->
+                <div style="margin-top: 25px">
+                  <div class="supply-text">Unit Conversations</div>
+
+                  <div>1 TCM = 10 Lakh Litres = 0.1 Crore Litres.</div>
+                  <div>1 Hectare(Ha) = 2.47 Acre = 5.92 Bigha</div>
+                </div>
+                <!-- {/* unit conv ends  */} -->
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div style="height: 500px; box-shadow: unset; color: #646464">
+              <div>
+                <div
+                  class="pop-name"
+                  style="text-align: center; margin-top: 15px"
+                >
+                  The Village map with
+                  <span style="font-weight: bold"> Land division</span>
+                  boundaries.
+                </div>
+
+                <div style="margin-top: 75px; text-align: center">
+                  <!-- <img src="/images/mapTemp.png" height="285px" alt="map" /> -->
+                  <img src="<%= page2_map %>" height="285px" alt="map" />
+                </div>
+
+                <div
+                  style="margin-top: 40px; text-align: center; font-size: 15px"
+                >
+                  *Estimated as per satellite image of year <%= current_year %>.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div
+              style="
+                height: 500px;
+                color: #287c78;
+                box-shadow: unset;
+                display: flex;
+                justify-content: center;
+              "
+            >
+              <div>
+                <div class="supply-text" style="margin-bottom: 10px">
+                  Area under the village
+                </div>
+
+                <div
+                  style="
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                  "
+                >
+                  <%= area_under_village %> Ha
+                  <span style="font-size: 13px; font-weight: normal">
+                    (hectares)
+                  </span>
+                </div>
+
+                <div style="margin-top: 15px; display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      margin-right: 30px;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #8ab776;
+                        border-radius: 100%;
+                        width: 17px;
+                        height: 17px;
+                        margin-right: 6px;
+                      "
+                    ></div>
+                    <div>Area (Ha)</div>
+                  </div>
+                  <div style="display: flex; align-items: center">
+                    <div
+                      style="
+                        background: #72c8d7;
+                        border-radius: 100%;
+                        width: 17px;
+                        height: 17px;
+                        margin-right: 6px;
+                      "
+                    ></div>
+                    <div>Water Lost (TCM)</div>
+                  </div>
+                </div>
+
+                <!-- STARTS HERE  -->
+                <div style="margin-top: 20px">
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Barren Land
+                  </div>
+                  <div style="height: 60px">
+                    <canvas
+                      id="myChartsCheck"
+                      height="8"
+                      style="margin-left: -10px"
+                    ></canvas>
+                  </div>
+
+                  <script>
+                    var ctxx = document
+                      .getElementById("myChartsCheck")
+                      .getContext("2d");
+                    var myChart = new Chart(ctxx, {
+                      type: "horizontalBar",
+                      data: {
+                        labels: ["Bar 1", "Bar 2"],
+                        datasets: [
+                          {
+                            label: "Value",
+                            data: [20, 30],
+                            backgroundColor: ["#8ab776", "#72c8d7"],
+                          },
+                        ],
+                      },
+                      options: {
+                        animation: {
+                          duration: 1,
+                          onComplete: function () {
+                            var chartInstance = this.chart,
+                              ctx = chartInstance.ctx;
+
+                            ctx.font = Chart.helpers.fontString(
+                              Chart.defaults.global.defaultFontSize,
+                              Chart.defaults.global.defaultFontStyle,
+                              Chart.defaults.global.defaultFontFamily
+                            );
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "bottom";
+
+                            this.data.datasets.forEach(function (dataset, i) {
+                              var meta =
+                                chartInstance.controller.getDatasetMeta(i);
+                              meta.data.forEach(function (bar, index) {
+                                var data = dataset.data[index];
+                                ctx.fillStyle = dataset.backgroundColor;
+                                ctx.fillText(
+                                  data,
+                                  bar._model.x + 15,
+                                  bar._model.y + 5
+                                );
+                              });
+                            });
+                          },
+                        },
+
+                        plugins: {
+                          datalabels: {
+                            display: false,
+                          },
+                        },
+                        maintainAspectRatio: false,
+                        legend: {
+                          display: false,
+                        },
+                        tooltips: {
+                          enabled: false,
+                        },
+                        scales: {
+                          xAxes: [
+                            {
+                              /*barPercentage: 0.2,
+                                          categoryPercentage: 0.5,
+                                          barThickness: "flex", */
+                              //barGap: "-100%",
+                              // minBarLength: 0,
+
+                              /*gridLines: {
+                                            zeroLineWidth: 0,
+                                          },*/
+
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                display: false,
+                                max: 45,
+                                min: 10,
+                              },
+                            },
+                          ],
+
+                          yAxes: [
+                            {
+                              barPercentage: 0.9,
+                              categoryPercentage: 0.8,
+
+                              //categoryPercentage: 0.5,
+                              //barThickness: "flex",
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                beginAtZero: true,
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    });
+                  </script>
+                </div>
+                <!-- ENDS HERE  -->
+
+                <!-- STARTS HERE  -->
+                <div style="margin-top: 5px">
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Habitation
+                  </div>
+                  <div style="height: 60px">
+                    <canvas
+                      id="myChartsCheck2"
+                      height="8"
+                      style="margin-left: -10px"
+                    ></canvas>
+                  </div>
+
+                  <script>
+                    var ctxx2 = document
+                      .getElementById("myChartsCheck2")
+                      .getContext("2d");
+                    var myChart = new Chart(ctxx2, {
+                      type: "horizontalBar",
+                      data: {
+                        labels: ["Bar 1", "Bar 2"],
+                        datasets: [
+                          {
+                            label: "Value",
+                            data: [20, 30],
+                            backgroundColor: ["#8ab776", "#72c8d7"],
+                          },
+                        ],
+                      },
+                      options: {
+                        animation: {
+                          duration: 1,
+                          onComplete: function () {
+                            var chartInstance = this.chart,
+                              ctx = chartInstance.ctx;
+
+                            ctx.font = Chart.helpers.fontString(
+                              Chart.defaults.global.defaultFontSize,
+                              Chart.defaults.global.defaultFontStyle,
+                              Chart.defaults.global.defaultFontFamily
+                            );
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "bottom";
+
+                            this.data.datasets.forEach(function (dataset, i) {
+                              var meta =
+                                chartInstance.controller.getDatasetMeta(i);
+                              meta.data.forEach(function (bar, index) {
+                                var data = dataset.data[index];
+                                ctx.fillStyle = dataset.backgroundColor;
+                                ctx.fillText(
+                                  data,
+                                  bar._model.x + 15,
+                                  bar._model.y + 5
+                                );
+                              });
+                            });
+                          },
+                        },
+
+                        plugins: {
+                          datalabels: {
+                            display: false,
+                          },
+                        },
+                        maintainAspectRatio: false,
+                        legend: {
+                          display: false,
+                        },
+                        tooltips: {
+                          enabled: false,
+                        },
+                        scales: {
+                          xAxes: [
+                            {
+                              /*barPercentage: 0.2,
+                                          categoryPercentage: 0.5,
+                                          barThickness: "flex", */
+                              //barGap: "-100%",
+                              // minBarLength: 0,
+
+                              /*gridLines: {
+                                            zeroLineWidth: 0,
+                                          },*/
+
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                display: false,
+                                max: 45,
+                                min: 10,
+                              },
+                            },
+                          ],
+
+                          yAxes: [
+                            {
+                              barPercentage: 0.9,
+                              categoryPercentage: 0.8,
+
+                              //categoryPercentage: 0.5,
+                              //barThickness: "flex",
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                beginAtZero: true,
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    });
+                  </script>
+                </div>
+                <!-- ENDS HERE  -->
+                <!-- STARTS HERE  -->
+                <div style="margin-top: 5px">
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Dense Vegetation
+                  </div>
+                  <div style="height: 60px">
+                    <canvas
+                      id="myChartsCheck3"
+                      height="8"
+                      style="margin-left: -10px"
+                    ></canvas>
+                  </div>
+
+                  <script>
+                    var ctxx3 = document
+                      .getElementById("myChartsCheck3")
+                      .getContext("2d");
+                    var myChart = new Chart(ctxx3, {
+                      type: "horizontalBar",
+                      data: {
+                        labels: ["Bar 1", "Bar 2"],
+                        datasets: [
+                          {
+                            label: "Value",
+                            data: [20, 30],
+                            backgroundColor: ["#8ab776", "#72c8d7"],
+                          },
+                        ],
+                      },
+                      options: {
+                        animation: {
+                          duration: 1,
+                          onComplete: function () {
+                            var chartInstance = this.chart,
+                              ctx = chartInstance.ctx;
+
+                            ctx.font = Chart.helpers.fontString(
+                              Chart.defaults.global.defaultFontSize,
+                              Chart.defaults.global.defaultFontStyle,
+                              Chart.defaults.global.defaultFontFamily
+                            );
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "bottom";
+
+                            this.data.datasets.forEach(function (dataset, i) {
+                              var meta =
+                                chartInstance.controller.getDatasetMeta(i);
+                              meta.data.forEach(function (bar, index) {
+                                var data = dataset.data[index];
+                                ctx.fillStyle = dataset.backgroundColor;
+                                ctx.fillText(
+                                  data,
+                                  bar._model.x + 15,
+                                  bar._model.y + 5
+                                );
+                              });
+                            });
+                          },
+                        },
+
+                        plugins: {
+                          datalabels: {
+                            display: false,
+                          },
+                        },
+                        maintainAspectRatio: false,
+                        legend: {
+                          display: false,
+                        },
+                        tooltips: {
+                          enabled: false,
+                        },
+                        scales: {
+                          xAxes: [
+                            {
+                              /*barPercentage: 0.2,
+                                          categoryPercentage: 0.5,
+                                          barThickness: "flex", */
+                              //barGap: "-100%",
+                              // minBarLength: 0,
+
+                              /*gridLines: {
+                                            zeroLineWidth: 0,
+                                          },*/
+
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                display: false,
+                                max: 45,
+                                min: 10,
+                              },
+                            },
+                          ],
+
+                          yAxes: [
+                            {
+                              barPercentage: 0.9,
+                              categoryPercentage: 0.8,
+
+                              //categoryPercentage: 0.5,
+                              //barThickness: "flex",
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                beginAtZero: true,
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    });
+                  </script>
+                </div>
+                <!-- ENDS HERE  -->
+                <!-- STARTS HERE  -->
+                <div style="margin-top: 5px">
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Water body
+                  </div>
+                  <div style="height: 60px">
+                    <canvas
+                      id="myChartsCheck4"
+                      height="8"
+                      style="margin-left: -10px"
+                    ></canvas>
+                  </div>
+
+                  <script>
+                    var ctxx4 = document
+                      .getElementById("myChartsCheck4")
+                      .getContext("2d");
+                    var myChart = new Chart(ctxx4, {
+                      type: "horizontalBar",
+                      data: {
+                        labels: ["Bar 1", "Bar 2"],
+                        datasets: [
+                          {
+                            label: "Value",
+                            data: [20, 30],
+                            backgroundColor: ["#8ab776", "#72c8d7"],
+                          },
+                        ],
+                      },
+                      options: {
+                        animation: {
+                          duration: 1,
+                          onComplete: function () {
+                            var chartInstance = this.chart,
+                              ctx = chartInstance.ctx;
+
+                            ctx.font = Chart.helpers.fontString(
+                              Chart.defaults.global.defaultFontSize,
+                              Chart.defaults.global.defaultFontStyle,
+                              Chart.defaults.global.defaultFontFamily
+                            );
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "bottom";
+
+                            this.data.datasets.forEach(function (dataset, i) {
+                              var meta =
+                                chartInstance.controller.getDatasetMeta(i);
+                              meta.data.forEach(function (bar, index) {
+                                var data = dataset.data[index];
+                                ctx.fillStyle = dataset.backgroundColor;
+                                ctx.fillText(
+                                  data,
+                                  bar._model.x + 15,
+                                  bar._model.y + 5
+                                );
+                              });
+                            });
+                          },
+                        },
+
+                        plugins: {
+                          datalabels: {
+                            display: false,
+                          },
+                        },
+                        maintainAspectRatio: false,
+                        legend: {
+                          display: false,
+                        },
+                        tooltips: {
+                          enabled: false,
+                        },
+                        scales: {
+                          xAxes: [
+                            {
+                              /*barPercentage: 0.2,
+                                          categoryPercentage: 0.5,
+                                          barThickness: "flex", */
+                              //barGap: "-100%",
+                              // minBarLength: 0,
+
+                              /*gridLines: {
+                                            zeroLineWidth: 0,
+                                          },*/
+
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                display: false,
+                                max: 45,
+                                min: 10,
+                              },
+                            },
+                          ],
+
+                          yAxes: [
+                            {
+                              barPercentage: 0.9,
+                              categoryPercentage: 0.8,
+
+                              //categoryPercentage: 0.5,
+                              //barThickness: "flex",
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                beginAtZero: true,
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    });
+                  </script>
+                </div>
+                <!-- ENDS HERE  -->
+                <!-- STARTS HERE  -->
+                <div style="margin-top: 5px">
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Vegetation
+                  </div>
+                  <div style="height: 60px">
+                    <canvas
+                      id="myChartsCheck5"
+                      height="8"
+                      style="margin-left: -10px"
+                    ></canvas>
+                  </div>
+
+                  <script>
+                    var ctxx5 = document
+                      .getElementById("myChartsCheck5")
+                      .getContext("2d");
+                    var myChart = new Chart(ctxx5, {
+                      type: "horizontalBar",
+                      data: {
+                        labels: ["Bar 1", "Bar 2"],
+                        datasets: [
+                          {
+                            label: "Value",
+                            data: [20, 30],
+                            backgroundColor: ["#8ab776", "#72c8d7"],
+                          },
+                        ],
+                      },
+                      options: {
+                        animation: {
+                          duration: 1,
+                          onComplete: function () {
+                            var chartInstance = this.chart,
+                              ctx = chartInstance.ctx;
+
+                            ctx.font = Chart.helpers.fontString(
+                              Chart.defaults.global.defaultFontSize,
+                              Chart.defaults.global.defaultFontStyle,
+                              Chart.defaults.global.defaultFontFamily
+                            );
+                            ctx.textAlign = "center";
+                            ctx.textBaseline = "bottom";
+
+                            this.data.datasets.forEach(function (dataset, i) {
+                              var meta =
+                                chartInstance.controller.getDatasetMeta(i);
+                              meta.data.forEach(function (bar, index) {
+                                var data = dataset.data[index];
+                                ctx.fillStyle = dataset.backgroundColor;
+                                ctx.fillText(
+                                  data,
+                                  bar._model.x + 15,
+                                  bar._model.y + 5
+                                );
+                              });
+                            });
+                          },
+                        },
+
+                        plugins: {
+                          datalabels: {
+                            display: false,
+                          },
+                        },
+                        maintainAspectRatio: false,
+                        legend: {
+                          display: false,
+                        },
+                        tooltips: {
+                          enabled: false,
+                        },
+                        scales: {
+                          xAxes: [
+                            {
+                              /*barPercentage: 0.2,
+                                          categoryPercentage: 0.5,
+                                          barThickness: "flex", */
+                              //barGap: "-100%",
+                              // minBarLength: 0,
+
+                              /*gridLines: {
+                                            zeroLineWidth: 0,
+                                          },*/
+
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                display: false,
+                                max: 45,
+                                min: 10,
+                              },
+                            },
+                          ],
+
+                          yAxes: [
+                            {
+                              barPercentage: 0.9,
+                              categoryPercentage: 0.8,
+
+                              //categoryPercentage: 0.5,
+                              //barThickness: "flex",
+                              gridLines: {
+                                display: false,
+                              },
+                              ticks: {
+                                beginAtZero: true,
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    });
+                  </script>
+                </div>
+                <!-- ENDS HERE  -->
+
+                <!-- <div>
+                  <div
+                    style="color: #287c78; font-size: 13px; margin-bottom: 5px"
+                  >
+                    Barren Land
+                  </div>
+
+                  <div>
+                    <div style="display: flex">
+                      <div
+                        style="background: #8ab776; width: 130px; height: 15px"
+                      ></div>
+
+                      <div
+                        style="
+                          height: 13px;
+
+                          font-size: 13px;
+                          margin-left: 10px;
+                        "
+                      >
+                        1234 Ha
+                      </div>
+                    </div>
+
+                    <div style="display: flex">
+                      <div
+                        style="background: #72c8d7; width: 130px; height: 15px"
+                      ></div>
+
+                      <div
+                        style="
+                          height: 13px;
+
+                          font-size: 13px;
+                          margin-left: 10px;
+                        "
+                      >
+                        1234 TCM
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div style="margin-top: 20px">
+                  <div>
+                    <div
+                      style="
+                        color: #287c78;
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                      "
+                    >
+                      Barren Land
+                    </div>
+
+                    <div>
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #8ab776;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 Ha
+                        </div>
+                      </div>
+
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #72c8d7;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 TCM
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="margin-top: 20px">
+                  <div>
+                    <div
+                      style="
+                        color: #287c78;
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                      "
+                    >
+                      Barren Land
+                    </div>
+
+                    <div>
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #8ab776;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 Ha
+                        </div>
+                      </div>
+
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #72c8d7;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 TCM
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="margin-top: 20px">
+                  <div>
+                    <div
+                      style="
+                        color: #287c78;
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                      "
+                    >
+                      Barren Land
+                    </div>
+
+                    <div>
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #8ab776;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 Ha
+                        </div>
+                      </div>
+
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #72c8d7;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 TCM
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="margin-top: 20px">
+                  <div>
+                    <div
+                      style="
+                        color: #287c78;
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                      "
+                    >
+                      Barren Land
+                    </div>
+
+                    <div>
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #8ab776;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 Ha
+                        </div>
+                      </div>
+
+                      <div style="display: flex">
+                        <div
+                          style="
+                            background: #72c8d7;
+                            width: 130px;
+                            height: 15px;
+                          "
+                        ></div>
+
+                        <div
+                          style="
+                            height: 13px;
+
+                            font-size: 13px;
+                            margin-left: 10px;
+                          "
+                        >
+                          1234 TCM
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- page number  -->
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">2</div>
+      </div>
+    </div>
+    <!-- SECOND PAGE ENDS  -->
+
+    <!-- THIRD PAGE STARTS  -->
+
+    <div class="wrapper-third">
+      <div class="water-balance-heading">
+        <h3>How much rainfall did our village recieve?</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid">
+          <div
+            class="item-grid"
+            style="flex-basis: unset; max-width: 50%; width: 50%"
+          >
+            <div
+              class="item"
+              style="color: #2a7c78; box-shadow: unset; height: unset"
+            >
+              <div class="four-header">
+                <div class="mr-right" style="min-width: 250px">
+                  <div class="heading-water" style="font-size: 17px">
+                    Rainfall recieved till <%= current_month %>.
+                  </div>
+                  <div class="tcm-water">
+                    <%= rainfall_recieved %> mm
+                    <span style="font-size: 12px; font-weight: normal">
+                      (milli meters)
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mr-right">
+                  <div class="heading-water" style="font-size: 17px">
+                    Rainy Days
+                  </div>
+                  <div class="tcm-water"><%= rainy_days %></div>
+                </div>
+              </div>
+              <div class="four-header">
+                <div class="mr-right" style="min-width: 250px">
+                  <div class="heading-water" style="font-size: 17px">
+                    Rainfall till now
+                  </div>
+                  <div class="tcm-water">
+                    <%= rainfall_till_now %> mm
+                    <span style="font-size: 12px; font-weight: normal">
+                      (milli meters)
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mr-right">
+                  <div class="heading-water" style="font-size: 17px">
+                    Total Rainwater (Volume)
+                  </div>
+                  <div class="tcm-water"><%= total_rainwater %> TCM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="item-grid"
+            style="flex-basis: unset; max-width: 50%; width: 50%"
+          >
+            <div class="item" style="box-shadow: unset; height: unset">
+              <div class="four-header">
+                <!-- water droplet  -->
+                <div style="display: flex; margin-right: 40px">
+                  <div style="display: flex; align-items: center">
+                    <!-- <img
+                      src="images/waterDrop.svg"
+                      alt="water drop"
+                      height="170px"
+                    /> -->
+
+                    <img
+                      alt="water drop"
+                      height="170px"
+                      src="<%= water_drop %>"
+                    />
+
+                    <!-- <img
+                      src="images/arrowDown.svg"
+                      alt="water drop"
+                      height="30px"
+                      style="margin-top: 80px; margin-left: 15px"
+                    /> -->
+
+                    <img
+                      alt="arrow"
+                      height="30px"
+                      style="margin-top: 80px; margin-left: 15px"
+                      src="<%= arrow %>"
+                    />
+                  </div>
+                </div>
+                <!-- water droplet  -->
+                <div class="mr-right">
+                  <div style="display: flex">
+                    <div style="margin-right: 50px">
+                      <div class="heading-water" style="font-size: 17px">
+                        Average Village Rainfall
+                      </div>
+                      <div class="tcm-water">
+                        <%= avg_village_rainfall %> mm
+                        <span style="font-size: 12px; font-weight: normal">
+                          (milli meters)
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="heading-water" style="font-size: 17px">
+                        Avg. Rainy Days
+                      </div>
+                      <div class="tcm-water"><%= avg_rainy_days %></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 30px">
+                    <div>
+                      <div class="heading-water" style="font-size: 15px">
+                        Overall Rainfall recieved till
+                        <span style="font-weight: bold"
+                          ><%= current_month %></span
+                        >
+                        is
+                        <span style="color: red; font-weight: bold">
+                          <%= less_than %> <%= current_percentage_rainfall %> %
+                        </span>
+                        than the Average rainfall.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="box-shadow: unset">
+          <!-- {/* FOR GRAPH     */} -->
+
+          <div
+            style="
+              text-align: left;
+              margin-top: 30px;
+              margin-bottom: 30px;
+              color: #646464;
+              font-size: 14px;
+            "
+          >
+            Graph showing monthly comparison of Rainfall Data
+          </div>
+
+          <div
+            style="display: flex; width: 100%; justify-content: space-between"
+          >
+            <div
+              class="groundAlertStatusGraph"
+              style="
+                height: 280px;
+                margin-bottom: 70px;
+                width: 100%;
+                display: flex;
+                margin-left: 60px;
+              "
+            >
+              <canvas
+                id="myChart"
+                style="width: 100%; max-width: 700px"
+              ></canvas>
+              <script>
+                var current_year_rainfall = "<%= current_year_rainfall  %>";
+                var previous_year_rainfall = "<%= previous_year_rainfall  %>";
+                var avg_years_rainfall = "<%= avg_years_rainfall  %>";
+
+                var minVal = "<%= min  %>";
+                var maxVal = "<%= max  %>";
+
+                var data = {
+                  labels: [
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
+                  ],
+                  datasets: [
+                    {
+                      backgroundColor: "#5DCBDD",
+                      data: [2, 3, 4, 6, 6],
+                      //data: current_year_rainfall,
+                    },
+                    {
+                      backgroundColor: "#F67373",
+                      data: [6, 2, 6, 6, 6],
+                      //data: previous_year_rainfall,
+                    },
+                    {
+                      backgroundColor: "#222F39",
+                      data: [6, 6, 8, 6, 6],
+                      //data: avg_years_rainfall,
+                    },
+                  ],
+                };
+
+                new Chart("myChart", {
+                  type: "bar",
+                  data: data,
+                  //plugins: [customPlugin],
+                  options: {
+                    plugins: {
+                      datalabels: {
+                        align: "end",
+                        anchor: "end",
+                        formatter: function (value) {
+                          return value;
+                        },
+                        font: {
+                          weight: "bold",
+                        },
+                        color: "#fff",
+                        offset: 10,
+                        padding: {
+                          top: 5,
+                          bottom: 5,
+                        },
+                      },
+                    },
+
+                    legend: {
+                      display: false,
+                    },
+
+                    animation: {
+                      duration: 1,
+                      onComplete: function () {
+                        var chartInstance = this.chart,
+                          ctx = chartInstance.ctx;
+
+                        ctx.font = Chart.helpers.fontString(
+                          Chart.defaults.global.defaultFontSize,
+                          Chart.defaults.global.defaultFontStyle,
+                          Chart.defaults.global.defaultFontFamily
+                        );
+                        ctx.textAlign = "center";
+                        ctx.textBaseline = "bottom";
+
+                        this.data.datasets.forEach(function (dataset, i) {
+                          var meta = chartInstance.controller.getDatasetMeta(i);
+                          meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillStyle = dataset.backgroundColor;
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                          });
+                        });
+                      },
+                    },
+
+                    barValueSpacing: 20,
+                    scales: {
+                      xAxes: [
+                        {
+                          // ticks: {
+                          // callback: (value) => {
+                          //  return value + data.datasets.map((vals) => vals.sss[0]);
+                          //},
+                          //},
+                          gridLines: {
+                            display: false,
+                          },
+                        },
+                      ],
+
+                      yAxes: [
+                        {
+                          scaleLabel: {
+                            display: true,
+                            labelString: "Rainfall (mm)",
+                          },
+
+                          gridLines: {
+                            display: true,
+                          },
+
+                          ticks: {
+                            // beginAtZero: true,
+                            display: true,
+                            precision: 0,
+                            min: 0,
+                            max: 9,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                });
+              </script>
+            </div>
+
+            <!-- 2nd div starts here  -->
+            <div style="width: 30%; margin-top: 40px">
+              <div style="display: flex; align-items: center">
+                <div
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    background: #5dcbdd;
+                    border-radius: 100%;
+                    margin-right: 13px;
+                  "
+                ></div>
+                <div style="color: #717171">Current Year Rainfall</div>
+              </div>
+              <div style="display: flex; align-items: center; margin-top: 15px">
+                <div
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    background: #f67373;
+                    border-radius: 100%;
+                    margin-right: 13px;
+                  "
+                ></div>
+                <div style="color: #717171">Previous Year Rainfall</div>
+              </div>
+              <div style="display: flex; align-items: center; margin-top: 15px">
+                <div
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    background: #222f39;
+                    border-radius: 100%;
+                    margin-right: 13px;
+                  "
+                ></div>
+                <div style="color: #717171">Avg. 5 Year Rainfall</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">3</div>
+      </div>
+    </div>
+
+    <!-- THIRD PAGE ENDS  -->
+
+    <!-- FOURTH PAGE STARTS  -->
+    <div class="wrapper-four">
+      <div class="water-balance-heading">
+        <h3>What happens to our Surfacewater Runoff ?</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid">
+          <div
+            class="item-grid"
+            style="flex-basis: unset; width: 40%; max-width: 40%"
+          >
+            <div class="item" style="color: #2a7c78; box-shadow: unset">
+              <div class="four-header">
+                <div class="mr-right">
+                  <div class="heading-water" style="font-size: 17px">
+                    Total runoff generated till <%= current_month %>.
+                  </div>
+                  <div class="tcm-water"><%= total_runoff_generated %> mm</div>
+                </div>
+              </div>
+              <div class="four-header">
+                <div>
+                  <div class="heading-area" style="font-size: 17px">
+                    Surfacewater bodies filled as of <%= current_month %>.
+                  </div>
+                  <div class="ha-area"><%= surfacewaterbodies_filled %></div>
+                </div>
+              </div>
+              <div class="four-header">
+                <div>
+                  <div class="heading-area" style="font-size: 17px">
+                    Total Surfacewater as of <%= current_month %>.
+                  </div>
+                  <div class="ha-area"><%= total_surfacewater %> TCM</div>
+                </div>
+              </div>
+
+              <!-- {/* FOR GRAPH     */} -->
+
+              <div
+                class="groundAlertStatusGraph"
+                style="height: 230px; margin-top: 60px"
+              >
+                <!-- graph starts here  -->
+
+                <canvas
+                  id="myChart2"
+                  style="width: 100%; max-width: 450px"
+                ></canvas>
+
+                <script>
+                  //var ctx = document.getElementById("myChart").getContext("2d");
+
+                  var data = [8, 7, 6, 5, 4, 3];
+
+                  var chart = new Chart("myChart2", {
+                    type: "bar",
+                    data: {
+                      labels: [
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December",
+                      ],
+                      datasets: [
+                        {
+                          data: data,
+
+                          backgroundColor: [
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                          ],
+
+                          filledValues: [2, 3, 6, 3, 2],
+                        },
+                      ],
+                    },
+
+                    options: {
+                      plugins: {
+                        datalabels: {
+                          display: false,
+                        },
+                      },
+
+                      legend: {
+                        display: false,
+                      },
+
+                      animation: {
+                        duration: 1,
+                        onComplete: function () {
+                          var chartInstance = this.chart,
+                            ctx = chartInstance.ctx;
+
+                          ctx.font = Chart.helpers.fontString(
+                            Chart.defaults.global.defaultFontSize,
+                            Chart.defaults.global.defaultFontStyle,
+                            Chart.defaults.global.defaultFontFamily
+                          );
+                          ctx.textAlign = "center";
+                          ctx.textBaseline = "bottom";
+
+                          this.data.datasets.forEach(function (dataset, i) {
+                            var meta =
+                              chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function (bar, index) {
+                              var data = dataset.data[index];
+                              ctx.fillStyle = dataset.backgroundColor;
+
+                              ctx.fillText(
+                                data,
+                                bar._model.x,
+                                bar._model.y - 5
+                              );
+                            });
+                          });
+                        },
+                      },
+
+                      barValueSpacing: 20,
+                      scales: {
+                        xAxes: [
+                          {
+                            barPercentage: 0.8, // decrease the width of the bar to 80%
+                            categoryPercentage: 0.3,
+                            ticks: {
+                              callback: (value) => {
+                                return value;
+                              },
+                            },
+
+                            gridLines: {
+                              display: true,
+                            },
+                          },
+                        ],
+
+                        yAxes: [
+                          {
+                            scaleLabel: {
+                              display: true,
+                              labelString: "Surface Water (TCM)",
+                            },
+
+                            gridLines: {
+                              display: true,
+                            },
+
+                            ticks: {
+                              display: false,
+
+                              min: 0,
+                              max: 10,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+
+                  // Change the last bar's background color
+                  chart.data.datasets[0].backgroundColor[data.length - 2] =
+                    "#287C78";
+                  chart.update();
+                </script>
+                <!-- graph ends  here  -->
+              </div>
+
+              <!-- {/* FOR GRAPH     */} -->
+            </div>
+          </div>
+
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{7}"
+            style="
+              display: flex;
+              justify-content: center;
+
+              flex-basis: unset;
+              width: 60%;
+              max-width: 60%;
+            "
+          >
+            <div style="box-shadow: unset">
+              <div style="display: flex">
+                <div
+                  style="
+                    border: 1px solid black;
+                    height: 199px;
+                    color: #646464;
+                    width: 180px;
+                    border-right: unset;
+                  "
+                >
+                  <div
+                    style="
+                      border-bottom: 1px solid black;
+                      text-align: center;
+                      padding-top: 5px;
+                      padding-bottom: 5px;
+                    "
+                  >
+                    Legend
+                  </div>
+
+                  <div style="display: flex">
+                    <div
+                      style="
+                        width: 80%;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <span style="margin-right: 9px">
+                        <!-- <img
+                            src="/images/checkDam.svg"
+                            alt="check dam"
+                            height="10px"
+                          /> -->
+
+                        <img
+                          alt="check dam"
+                          height="10px"
+                          src="<%= check_dam_img %>"
+                        />
+                      </span>
+                      <span style="font-size: 14px">Check Dam</span>
+                    </div>
+                    <div
+                      style="
+                        width: 20%;
+                        padding: 8px;
+                        border-bottom: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <%= check_dam %>
+                    </div>
+                  </div>
+                  <div style="display: flex">
+                    <div
+                      style="
+                        width: 80%;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <span style="margin-right: 9px">
+                        <!-- <img
+                            src="/images/percTank.svg"
+                            alt="check dam"
+                            height="8px"
+                          /> -->
+
+                        <img
+                          alt="perc tank"
+                          height="8px"
+                          src="<%= percolation_tank_img %>"
+                        />
+                      </span>
+                      <span style="font-size: 14px">Percolation Tank</span>
+                    </div>
+                    <div
+                      style="
+                        width: 20%;
+                        padding: 8px;
+                        border-bottom: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <%= percolation_tank %>
+                    </div>
+                  </div>
+                  <div style="display: flex">
+                    <div
+                      style="
+                        width: 80%;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <span style="margin-right: 9px">
+                        <!-- <img
+                            src="/images/villPond.svg"
+                            alt="check dam"
+                            height="22px"
+                          /> -->
+
+                        <img
+                          alt="perc tank"
+                          height="22px"
+                          src="<%= village_pond_img %>"
+                        />
+                      </span>
+                      <span style="font-size: 14px">Village Pond</span>
+                    </div>
+                    <div
+                      style="
+                        width: 20%;
+                        padding: 8px;
+                        border-bottom: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <%= village_pond %>
+                    </div>
+                  </div>
+                  <div style="display: flex">
+                    <div
+                      style="
+                        width: 80%;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <span style="margin-right: 9px">
+                        <!-- <img
+                            src="/images/farmPond.svg"
+                            alt="check dam"
+                            height="20px"
+                          /> -->
+
+                        <img
+                          alt="check dam"
+                          height="20px"
+                          src="<%= farm_pond_img %>"
+                        />
+                      </span>
+
+                      <span style="font-size: 14px">Farm Pond</span>
+                    </div>
+                    <div
+                      style="
+                        width: 20%;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                      "
+                    >
+                      <%= farm_pond %>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    border: 1px solid black;
+                    width: 470px;
+
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  <div
+                    style="
+                      margin-bottom: 15px;
+                      margin-top: 10px;
+                      color: #646464;
+                    "
+                  >
+                    <div style="margin-bottom: 35px">
+                      The Village map with Surface Water Bodies Locations.
+                    </div>
+                    <div style="text-align: center; margin-top: 20px">
+                      <!-- <img
+                        src="/images/mapTemp2.png"
+                        alt="map"
+                        height="410px"
+                      /> -->
+
+                      <img
+                        alt="map"
+                        height="410px"
+                        src="<%= surface_body_locations_map_img %>"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">4</div>
+      </div>
+    </div>
+    <!-- FOURTH PAGE ENDS  -->
+
+    <!-- FIFTH PAGE STARTS  -->
+
+    <div class="wrapper-five">
+      <div class="water-balance-heading">
+        <h3>What is our village Groundwater Level ?</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid">
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{7}"
+            style="flex-basis: unset; width: 60%; max-width: 60%"
+          >
+            <div
+              class="item"
+              style="
+                color: #2a7c78;
+                box-shadow: unset;
+
+                margin-bottom: 50px;
+              "
+            >
+              <div style="color: #000000; margin-bottom: 25px; font-size: 16px">
+                <span style="font-weight: bold">Note:-</span> Groundwater is our
+                invisible resource and is highly dynamic in nature, so it needs
+                to be used judiciously.
+              </div>
+              <div class="four-header">
+                <div class="mr-right">
+                  <div class="heading-water" style="font-size: 17px">
+                    Soil Moisture + Ground Water in <%= current_month %>
+                  </div>
+                  <div class="tcm-water">
+                    <%= soil_moisture_groundwater %> mm
+                  </div>
+                </div>
+
+                <!-- {/* FOR SEVEN  */} -->
+                <div class="mr-right" style="margin-left: 30px">
+                  <div class="heading-water" style="font-size: 17px">
+                    Total Observation Wells
+                  </div>
+                  <div
+                    class="tcm-water"
+                    style="display: flex; align-items: center"
+                  >
+                    <div style="margin-right: 15px">
+                      <img
+                        alt="obs wells"
+                        height="22px"
+                        style="display: flex; align-items: center"
+                        src="<%= obs_wells_img %>"
+                      />
+                    </div>
+                    <div><%= obs_wells %> mm</div>
+                  </div>
+                </div>
+                <!-- {/* FOR SEVEN  */} -->
+              </div>
+              <div class="four-header">
+                <div>
+                  <div
+                    class="heading-area"
+                    style="font-size: 17px; margin-top: 10px"
+                  >
+                    Average water level as of <%= current_month %>.
+                  </div>
+                  <div class="ha-area">
+                    <%= avg_water_level %> m Bgl
+                    <span style="font-size: 12px; font-weight: normal">
+                      (Meters Below Ground Level)
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- {/* FOR GRAPH     */} -->
+
+              <div
+                style="
+                  text-align: center;
+                  margin-top: 50px;
+                  margin-bottom: 30px;
+                  color: #646464;
+                "
+              >
+                Graph representing
+                <span style="font-weight: bold">
+                  Monthwise Groundwater Level.
+                </span>
+              </div>
+              <div
+                class="groundAlertStatusGraph"
+                style="
+                  height: 230px;
+
+                  display: flex;
+                  justify-content: center;
+                "
+              >
+                <canvas
+                  id="myChart3"
+                  style="width: 100%; max-width: 500px"
+                ></canvas>
+
+                <script>
+                  var ctx = document
+                    .getElementById("myChart3")
+                    .getContext("2d");
+                  var data = [50, 100, 70, 90, 80];
+                  var limit = 170;
+
+                  var chart2 = new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                      labels: [
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December",
+                      ],
+                      datasets: [
+                        {
+                          label: "Data",
+                          data: data,
+                          backgroundColor: [
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                            "#868686",
+                          ],
+                        },
+                      ],
+                    },
+                    options: {
+                      plugins: {
+                        datalabels: {
+                          display: false,
+                        },
+                      },
+
+                      legend: {
+                        display: false,
+                      },
+                      animation: {
+                        duration: 1,
+                        onComplete: function () {
+                          var chartInstance = this.chart,
+                            ctx = chartInstance.ctx;
+
+                          ctx.font = Chart.helpers.fontString(
+                            Chart.defaults.global.defaultFontSize,
+                            Chart.defaults.global.defaultFontStyle,
+                            Chart.defaults.global.defaultFontFamily
+                          );
+                          ctx.textAlign = "center";
+                          ctx.textBaseline = "bottom";
+
+                          this.data.datasets.forEach(function (dataset, i) {
+                            var meta =
+                              chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function (bar, index) {
+                              var data = dataset.data[index];
+                              ctx.fillStyle = dataset.backgroundColor;
+
+                              ctx.fillText(
+                                data,
+                                bar._model.x,
+                                bar._model.y - 5
+                              );
+                            });
+                          });
+                        },
+                      },
+
+                      scales: {
+                        yAxes: [
+                          {
+                            scaleLabel: {
+                              display: true,
+                              labelString: "Water(TCM)",
+                            },
+
+                            ticks: {
+                              max: limit,
+                              drawTicks: false,
+                              callback: function (value, index, values) {
+                                if (value === limit) {
+                                  return value + " (limit of well)";
+                                } else {
+                                  return value;
+                                }
+                              },
+                            },
+                          },
+                        ],
+                        xAxes: [
+                          {
+                            barPercentage: 0.8, // decrease the width of the bar to 80%
+                            categoryPercentage: 0.3,
+                          },
+                        ],
+                      },
+                      annotation: {
+                        annotations: [
+                          {
+                            type: "line",
+                            mode: "horizontal",
+                            scaleID: "y-axis-0",
+                            value: limit,
+                            borderColor: "black",
+                            borderWidth: 1,
+                            label: {
+                              enabled: true,
+                              content: "Limit",
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+
+                  // Change the last bar's background color
+                  chart2.data.datasets[0].backgroundColor[data.length - 1] =
+                    "#287C78";
+                  chart2.update();
+                </script>
+              </div>
+
+              <!-- {/* FOR GRAPH     */} -->
+            </div>
+          </div>
+
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{5}"
+            style="
+              display: flex;
+              justify-content: flex-end;
+              flex-basis: unset;
+              width: 40%;
+              max-width: 40%;
+            "
+          >
+            <div
+              class="item"
+              style="box-shadow: unset; border: 1px solid black"
+            >
+              <div style="display: flex">
+                <div
+                  style="width: 470px; display: flex; justify-content: center"
+                >
+                  <div style="margin-bottom: 15px; margin-top: 10px">
+                    <div style="color: #646464; margin-bottom: 35px">
+                      The Village map with
+                      <span style="font-weight: bold"> Observation Wells </span>
+                      Locations.
+                    </div>
+                    <div style="text-align: center; margin-top: 20px">
+                      <!-- <img
+                        src="/images/mapTemp2.svg"
+                        alt="map"
+                        height="410px"
+                      /> -->
+
+                      <img
+                        alt="map"
+                        height="410px"
+                        src="<%= map_img_page_5 %>"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">5</div>
+      </div>
+    </div>
+
+    <!-- FIFTH PAGE ENDS  -->
+
+    <!-- SIXTH PAGE STARTS  -->
+
+    <div class="wrapper-six">
+      <div class="water-balance-heading">
+        <h3>How much water did our village crops use?</h3>
+      </div>
+
+      <div class="four-header">
+        <div class="mr-right">
+          <div class="heading-water">
+            Water consumed by crops till <%= current_month %>
+          </div>
+          <div class="tcm-water"><%= water_consumed_by_crops %> TCM</div>
+        </div>
+
+        <div>
+          <div class="heading-area">Area Under Crops</div>
+          <div class="ha-area">
+            <%= area_under_crops %> Ha
+            <span style="font-weight: normal">(Hectares)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="four-header-second">
+        <div>
+          <div>Types of Crops being grown are,</div>
+        </div>
+
+        <div class="content-row-second">
+          <div class="bar-represents">
+            <div class="circle"></div>
+            <div>
+              Bar and % represents Areawise Drip <br />
+              implemented
+            </div>
+          </div>
+          <div class="bar-represents-two">
+            <div class="circle green"></div>
+            <div>Represents water consumed by the crop</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid" style="width: calc(100% + 24px)">
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #f2f2f2;
+                color: #2a7c78;
+                height: 480px;
+                padding: 16px;
+                box-sizing: border-box;
+              "
+            >
+              <div>
+                <div class="supply-text">Kharif</div>
+
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_kharif.map(function(name, index) { %>
+
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <img alt="mango" height="31px" src="<%=mango%>" />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <% }); %>
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_kharif_row2.map(function(name) { %>
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <!-- <img
+                                      src="/images/mango.png"
+                                      alt="mango"
+                                      height="31px"
+                                    /> -->
+
+                            <img alt="mango" height="31px" src="<%=mango%>" />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_kharif_row3.map(function(name) { %>
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <!-- <img
+                                      src="/images/mango.png"
+                                      alt="mango"
+                                      height="31px"
+                                    /> -->
+
+                            <img alt="mango" height="31px" src="<%=mango%>" />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_kharif_row4.map(function(name) { %>
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <!-- <img
+                                      src="/images/mango.png"
+                                      alt="mango"
+                                      height="31px"
+                                    /> -->
+
+                            <img alt="mango" height="31px" src="<%=mango%>" />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+                </div>
+
+                <!-- <div style="width: 33.333%; margin-top: 25px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 25px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <div style="margin-right: 10px">
+                          <img
+                            alt="mango"
+                            height="31px"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAqCAYAAAA0yJLWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAONSURBVHgBzZjPThRBEMa/6lmVxMt68+Z48yYkmhADYfcJWJ4APJiAF+EF2Nn4AOAFSDy4PgHwBKyASqKJ8ASOPMF6MEFguqyaP2Yx7M7MMrPxl+zQ083OflNd1d1VhD5MLXo1cswsQONgHpeuajzkg8i3lncDtjtHW56PgqHpJa8Bjn7QkqkaohmAaz0iUp5AneA8WPn01jtGQdCzF964c8t8w81pX1jbKsJypJfpRW8Bxrwb8H9d/bBMG1n7I+lkCvvFWMTM5MoVwaVtJVabXPTcYURS0ogtti1NF8Mg06h+xpe2o6Kml143QLwNtnMHm95OnkeZpKEPcqyti1O/xzBIMIjBqrfvSiDoLVkNDgTip8gJXddZE7MHRJ68/TyyEfrT2Bi6Z2dRgFSMs0bgho7B2g8sUVsZw3Fn3eumPYwGDYbi5A87zjxdXRYUn8G7sLxjjDMj7QVkmHrxv2NxwDfyEp1+/kbIQW3Zq6ol1CJ6by9MU3x7GcPhy6d1sLHaxk1EJdw4KHoFMNb3N1dXevsc5CQWtCfN+xgWxo6Y41GkCpMPntbd0y97u0OJUh8TD/6MrKt9PwhjbO2cIYifkr7c+IMn9Z+nX/eOdNhkfY76U2BCC91MUIQrDt/c32hOhFaLhK7pLOQSZc+dVyjAh/5CVJt62fKcO/Y5IqeHU6G1SF8GwqXBmO8onq5z2z4MztBItjlZbN1MlhJBTZRD9eK3WTjY8tpAvI+qr2X8cg0lYcCzYYM5jD7DXEudvvCwFzl4acgU3lOLSTSqT/npljLUQMmc/4Jr2CZ7YjVVFJF5jJJxKleiulpJ/Ua0EZeKHm+ox0IDLaULJopZLFMRf0pmJMWnzkYjKKamFz1yZ17Ry8SJrOSGN2xP/gtR6DmTyWGyM1hUfJgbJc4dDBYVn6d9jI62/mb69DH7GBFyxgozqVRRknCeYDT4h1teRxvpK7rlwmoEgwgu7FzSThUl5+UOyqfdWyBJFdWJcjMf5eFrItvbkWmdCpPOktBp+zcpzbZ4ShaMErCMa+tamUSFUSErLQpErN/6uLm6ft1Y5m1G8v8WCkIFHW40vX7jmUUVZa00QcgjSnGYNUcbdj/sagEtTZCSu8DRU0vIc9bSsK9nLTXmPrpotEgY15HVYpKWS7Yykaf2OVQpSImzZrWYi7560v2nUFEJYR0e1GBjHsfVPq0iHyMIWskGm5c/kmmGcbcuiQcAAAAASUVORK5CYII="
+                          />
+                        </div>
+                        <div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            Mango
+                          </div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            123 Ha
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div
+                          style="
+                            position: relative;
+                            width: 100px;
+                            background: #c5c5c5;
+                            height: 9px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              background: #3796ca;
+                              width: 80%;
+                              height: 9px;
+                            "
+                          ></div>
+                        </div>
+                        <div
+                          style="
+                            width: 100px;
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 13px;
+                            color: #287c78;
+                            font-weight: bold;
+                            margin-top: 3px;
+                          "
+                        >
+                          <div>70%</div>
+                          <div>123 TCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="width: 33.333%; margin-top: 25px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 25px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <div style="margin-right: 10px">
+                          <img
+                            alt="mango"
+                            height="31px"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAqCAYAAAA0yJLWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAONSURBVHgBzZjPThRBEMa/6lmVxMt68+Z48yYkmhADYfcJWJ4APJiAF+EF2Nn4AOAFSDy4PgHwBKyASqKJ8ASOPMF6MEFguqyaP2Yx7M7MMrPxl+zQ083OflNd1d1VhD5MLXo1cswsQONgHpeuajzkg8i3lncDtjtHW56PgqHpJa8Bjn7QkqkaohmAaz0iUp5AneA8WPn01jtGQdCzF964c8t8w81pX1jbKsJypJfpRW8Bxrwb8H9d/bBMG1n7I+lkCvvFWMTM5MoVwaVtJVabXPTcYURS0ogtti1NF8Mg06h+xpe2o6Kml143QLwNtnMHm95OnkeZpKEPcqyti1O/xzBIMIjBqrfvSiDoLVkNDgTip8gJXddZE7MHRJ68/TyyEfrT2Bi6Z2dRgFSMs0bgho7B2g8sUVsZw3Fn3eumPYwGDYbi5A87zjxdXRYUn8G7sLxjjDMj7QVkmHrxv2NxwDfyEp1+/kbIQW3Zq6ol1CJ6by9MU3x7GcPhy6d1sLHaxk1EJdw4KHoFMNb3N1dXevsc5CQWtCfN+xgWxo6Y41GkCpMPntbd0y97u0OJUh8TD/6MrKt9PwhjbO2cIYifkr7c+IMn9Z+nX/eOdNhkfY76U2BCC91MUIQrDt/c32hOhFaLhK7pLOQSZc+dVyjAh/5CVJt62fKcO/Y5IqeHU6G1SF8GwqXBmO8onq5z2z4MztBItjlZbN1MlhJBTZRD9eK3WTjY8tpAvI+qr2X8cg0lYcCzYYM5jD7DXEudvvCwFzl4acgU3lOLSTSqT/npljLUQMmc/4Jr2CZ7YjVVFJF5jJJxKleiulpJ/Ua0EZeKHm+ox0IDLaULJopZLFMRf0pmJMWnzkYjKKamFz1yZ17Ry8SJrOSGN2xP/gtR6DmTyWGyM1hUfJgbJc4dDBYVn6d9jI62/mb69DH7GBFyxgozqVRRknCeYDT4h1teRxvpK7rlwmoEgwgu7FzSThUl5+UOyqfdWyBJFdWJcjMf5eFrItvbkWmdCpPOktBp+zcpzbZ4ShaMErCMa+tamUSFUSErLQpErN/6uLm6ft1Y5m1G8v8WCkIFHW40vX7jmUUVZa00QcgjSnGYNUcbdj/sagEtTZCSu8DRU0vIc9bSsK9nLTXmPrpotEgY15HVYpKWS7Yykaf2OVQpSImzZrWYi7560v2nUFEJYR0e1GBjHsfVPq0iHyMIWskGm5c/kmmGcbcuiQcAAAAASUVORK5CYII="
+                          />
+                        </div>
+                        <div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            Mango
+                          </div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            123 Ha
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div
+                          style="
+                            position: relative;
+                            width: 100px;
+                            background: #c5c5c5;
+                            height: 9px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              background: #3796ca;
+                              width: 80%;
+                              height: 9px;
+                            "
+                          ></div>
+                        </div>
+                        <div
+                          style="
+                            width: 100px;
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 13px;
+                            color: #287c78;
+                            font-weight: bold;
+                            margin-top: 3px;
+                          "
+                        >
+                          <div>70%</div>
+                          <div>123 TCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="width: 33.333%; margin-top: 25px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-top: 25px;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <div style="margin-right: 10px">
+                          <img
+                            alt="mango"
+                            height="31px"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAqCAYAAAA0yJLWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAONSURBVHgBzZjPThRBEMa/6lmVxMt68+Z48yYkmhADYfcJWJ4APJiAF+EF2Nn4AOAFSDy4PgHwBKyASqKJ8ASOPMF6MEFguqyaP2Yx7M7MMrPxl+zQ083OflNd1d1VhD5MLXo1cswsQONgHpeuajzkg8i3lncDtjtHW56PgqHpJa8Bjn7QkqkaohmAaz0iUp5AneA8WPn01jtGQdCzF964c8t8w81pX1jbKsJypJfpRW8Bxrwb8H9d/bBMG1n7I+lkCvvFWMTM5MoVwaVtJVabXPTcYURS0ogtti1NF8Mg06h+xpe2o6Kml143QLwNtnMHm95OnkeZpKEPcqyti1O/xzBIMIjBqrfvSiDoLVkNDgTip8gJXddZE7MHRJ68/TyyEfrT2Bi6Z2dRgFSMs0bgho7B2g8sUVsZw3Fn3eumPYwGDYbi5A87zjxdXRYUn8G7sLxjjDMj7QVkmHrxv2NxwDfyEp1+/kbIQW3Zq6ol1CJ6by9MU3x7GcPhy6d1sLHaxk1EJdw4KHoFMNb3N1dXevsc5CQWtCfN+xgWxo6Y41GkCpMPntbd0y97u0OJUh8TD/6MrKt9PwhjbO2cIYifkr7c+IMn9Z+nX/eOdNhkfY76U2BCC91MUIQrDt/c32hOhFaLhK7pLOQSZc+dVyjAh/5CVJt62fKcO/Y5IqeHU6G1SF8GwqXBmO8onq5z2z4MztBItjlZbN1MlhJBTZRD9eK3WTjY8tpAvI+qr2X8cg0lYcCzYYM5jD7DXEudvvCwFzl4acgU3lOLSTSqT/npljLUQMmc/4Jr2CZ7YjVVFJF5jJJxKleiulpJ/Ua0EZeKHm+ox0IDLaULJopZLFMRf0pmJMWnzkYjKKamFz1yZ17Ry8SJrOSGN2xP/gtR6DmTyWGyM1hUfJgbJc4dDBYVn6d9jI62/mb69DH7GBFyxgozqVRRknCeYDT4h1teRxvpK7rlwmoEgwgu7FzSThUl5+UOyqfdWyBJFdWJcjMf5eFrItvbkWmdCpPOktBp+zcpzbZ4ShaMErCMa+tamUSFUSErLQpErN/6uLm6ft1Y5m1G8v8WCkIFHW40vX7jmUUVZa00QcgjSnGYNUcbdj/sagEtTZCSu8DRU0vIc9bSsK9nLTXmPrpotEgY15HVYpKWS7Yykaf2OVQpSImzZrWYi7560v2nUFEJYR0e1GBjHsfVPq0iHyMIWskGm5c/kmmGcbcuiQcAAAAASUVORK5CYII="
+                          />
+                        </div>
+                        <div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            Mango
+                          </div>
+                          <div style="color: #4e4e4e; font-size: 15px">
+                            123 Ha
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div
+                          style="
+                            position: relative;
+                            width: 100px;
+                            background: #c5c5c5;
+                            height: 9px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              background: #3796ca;
+                              width: 80%;
+                              height: 9px;
+                            "
+                          ></div>
+                        </div>
+                        <div
+                          style="
+                            width: 100px;
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 13px;
+                            color: #287c78;
+                            font-weight: bold;
+                            margin-top: 3px;
+                          "
+                        >
+                          <div>70%</div>
+                          <div>123 TCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #dffad8;
+                height: 480px;
+                padding: 16px;
+                box-sizing: border-box;
+              "
+            >
+              <div>
+                <div class="demand-text" style="color: #4e4e4e">Rabi</div>
+
+                <!-- STARTS HERER  -->
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_rabi.map(function(name) { %>
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <img alt="mango" height="31px" src="<%=mango%>" />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+                </div>
+                <!-- ENDS HERER  -->
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #f6f2c8;
+                height: 480px;
+                padding: 16px;
+                box-sizing: border-box;
+              "
+            >
+              <div>
+                <div class="water-balance-text">Summer</div>
+
+                <!-- STARTS HERER  -->
+                <div style="display: flex; justify-content: space-between">
+                  <% map_values_summer.map(function(name) { %>
+                  <div style="width: 33.33%">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+                          "
+                        >
+                          <div style="margin-right: 10px">
+                            <img
+                              alt="mango"
+                              height="31px"
+                              src="<%=mango_gold%>"
+                            />
+                          </div>
+                          <div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              Mango
+                            </div>
+                            <div style="color: #4e4e4e; font-size: 15px">
+                              <%=name.current_ha%> Ha
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div
+                            style="
+                              position: relative;
+                              width: 100px;
+                              background: #c5c5c5;
+                              height: 9px;
+                            "
+                          >
+                            <div
+                              style="
+                                position: absolute;
+                                background: #3796ca;
+                                height: 9px;
+                                width: <%=name.current_percentage%>%;
+                              "
+                            ></div>
+                          </div>
+                          <div
+                            style="
+                              width: 100px;
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 13px;
+                              color: #287c78;
+                              font-weight: bold;
+                              margin-top: 3px;
+                            "
+                          >
+                            <div><%=name.current_percentage%>%</div>
+                            <div><%=name.current_tcm%> TCM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+                </div>
+                <!-- ENDS HERER  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">6</div>
+      </div>
+    </div>
+
+    <!-- SIXTH PAGE ENDS  -->
+
+    <!-- SEVENTH PAGE STARTS  -->
+    <div class="wrapper-seven">
+      <div class="water-balance-heading">
+        <h3>How much water does our Households use ?</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid">
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{7}"
+            style="flex-basis: unset; width: 45%; max-width: 45%"
+          >
+            <div class="item" style="color: #2a7c78; box-shadow: unset">
+              <div class="four-header">
+                <div class="mr-right">
+                  <div class="heading-water" style="font-size: 17px">
+                    Domestic Water consumed till <%= current_month %>
+                  </div>
+                  <div class="tcm-water">
+                    <%= domestic_water_consumed %> TCM
+                  </div>
+                </div>
+              </div>
+              <div class="four-header">
+                <div>
+                  <div
+                    class="heading-area"
+                    style="font-size: 17px; margin-top: 10px"
+                  >
+                    Annual consumption of the Village
+                  </div>
+                  <div class="ha-area">
+                    <%= annual_consumption_village %> TCM
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex">
+                <div style="height: 200px">
+                  <div
+                    style="
+                      text-align: center;
+                      margin-top: 50px;
+                      margin-bottom: 30px;
+                      color: #6e8482;
+                    "
+                  >
+                    Pie chart showing Annual Domestic <br />
+                    consumption
+                  </div>
+                  <canvas id="myChartPie"></canvas>
+                </div>
+
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    margin-left: 100px;
+                    margin-top: 100px;
+                  "
+                >
+                  <div
+                    style="
+                      background: #287c78;
+                      border-radius: 100%;
+                      width: 12px;
+                      height: 12px;
+                      margin-right: 10px;
+                    "
+                  ></div>
+
+                  <div>Overall Water Consumption</div>
+                </div>
+              </div>
+              <script>
+                var ctx = document
+                  .getElementById("myChartPie")
+                  .getContext("2d");
+                var myCharts = new Chart(ctx, {
+                  type: "pie",
+                  data: {
+                    labels: ["Red", "Blue"],
+                    datasets: [
+                      {
+                        label: "# of Votes",
+                        data: [60, 40],
+                        backgroundColor: ["#287C78", "#D9D9D9"],
+                      },
+                    ],
+                  },
+                  options: {
+                    plugins: {
+                      datalabels: {
+                        display: true,
+                        formatter: (value, ctx) => {
+                          let sum = 0;
+                          let dataArr = ctx.chart.data.datasets[0].data;
+                          dataArr.map((data) => {
+                            sum += data;
+                          });
+                          let percentage =
+                            ((value * 100) / sum).toFixed(2) + "%";
+                          return percentage;
+                        },
+                        color: "#fff",
+                      },
+                    },
+
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                      display: false,
+                    },
+                    tooltips: {
+                      callbacks: {
+                        label: function (tooltipItem, data) {
+                          var allData =
+                            data.datasets[tooltipItem.datasetIndex].data;
+                          var tooltipLabel = data.labels[tooltipItem.index];
+                          var tooltipData = allData[tooltipItem.index];
+                          var total = 0;
+                          for (var i in allData) {
+                            total += allData[i];
+                          }
+                          var tooltipPercentage = Math.round(
+                            (tooltipData / total) * 100
+                          );
+                          return (
+                            tooltipLabel +
+                            ": " +
+                            tooltipData +
+                            " (" +
+                            tooltipPercentage +
+                            "%)"
+                          );
+                        },
+                      },
+                    },
+                  },
+                });
+              </script>
+            </div>
+          </div>
+
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{5}"
+            style="
+              display: flex;
+              justify-content: center;
+              flex-basis: unset;
+              width: 55%;
+              max-width: 55%;
+            "
+          >
+            <div
+              class="item"
+              style="
+                box-shadow: unset;
+                border: 1px solid black;
+                height: 330px;
+                margin-top: 50px;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    width: 500px;
+
+                    padding: 12px;
+                    box-sizing: border-box;
+                  "
+                >
+                  <div
+                    style="
+                      margin-bottom: 15px;
+                      margin-top: 10px;
+                      color: #000000;
+                    "
+                  >
+                    Water is consumed by,
+                  </div>
+
+                  <!-- div one  -->
+                  <div
+                    style="
+                      padding: 2px 12px;
+                      display: flex;
+                      justify-content: space-between;
+                      color: #6e8482;
+                    "
+                  >
+                    <div>
+                      <div style="height: 65px">
+                        <!-- <img
+                          src="/images/humans7.svg"
+                          height="50px"
+                          alt="humans"
+                        /> -->
+
+                        <img height="50px" alt="humans" src="<%=humans_img%>" />
+                      </div>
+
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <%= water_consumed_by_humans %>%
+                      </div>
+                      <div>Humans</div>
+                    </div>
+                    <div>
+                      <div
+                        style="height: 65px; display: flex; align-items: center"
+                      >
+                        <!-- <img
+                          src="/images/cattle7.svg"
+                          height="40px"
+                          alt="humans"
+                        /> -->
+
+                        <img height="40px" alt="cattle" src="<%=cattle_img%>" />
+                      </div>
+
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <%= water_consumed_by_cattle%>%
+                      </div>
+                      <div style="text-align: center">Cattle</div>
+                    </div>
+                    <div>
+                      <div
+                        style="height: 65px; display: flex; align-items: center"
+                      >
+                        <!-- <img
+                          src="/images/sheep7.svg"
+                          height="40px"
+                          alt="humans"
+                        /> -->
+
+                        <img height="40px" alt="sheep" src="<%=sheep_img%>" />
+                      </div>
+
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <%= water_consumed_by_sheep%>%
+                      </div>
+                      <div>Sheep</div>
+                    </div>
+                    <div>
+                      <div
+                        style="height: 65px; display: flex; align-items: center"
+                      >
+                        <!-- <img
+                          src="/images/poultry7.svg"
+                          height="50px"
+                          alt="humans"
+                        /> -->
+
+                        <img
+                          height="50px"
+                          alt="poultry"
+                          src="<%=poultry_img%>"
+                        />
+                      </div>
+
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <%= water_consumed_by_poultry%>%
+                      </div>
+                      <div>Poultry</div>
+                    </div>
+                    <div>
+                      <div style="height: 65px">
+                        <!-- <img
+                          src="/images/industries7.svg"
+                          height="50px"
+                          alt="humans"
+                        /> -->
+                        <img
+                          height="50px"
+                          alt="humans"
+                          src="<%=industries_img%>"
+                        />
+                      </div>
+
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 22px;
+                          font-weight: bold;
+                        "
+                      >
+                        <%= water_consumed_by_industries%>%
+                      </div>
+                      <div>Industries</div>
+                    </div>
+                  </div>
+                  <!-- div one  -->
+
+                  <!-- div two starts  -->
+                  <div style="margin-top: 30px; margin-bottom: 30px">
+                    Who have a population of,
+                  </div>
+
+                  <div
+                    style="
+                      padding: 2px 12px;
+                      display: flex;
+                      justify-content: space-between;
+                      color: #6e8482;
+                    "
+                  >
+                    <div>
+                      <div style="font-size: 22px; font-weight: bold">
+                        <%= population_humans%>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size: 22px; font-weight: bold">
+                        <%= population_cattle%>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size: 22px; font-weight: bold">
+                        <%= population_sheep%>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size: 22px; font-weight: bold">
+                        <%= population_poultry%>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size: 22px; font-weight: bold">
+                        <%= population_industries%>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- div two ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">7</div>
+      </div>
+    </div>
+    <!-- SEVENTH PAGE ENDS  -->
+
+    <!-- EIGHTH PAGE STARTS  -->
+    <div class="wrapper-eight">
+      <div class="water-balance-heading">
+        <h3>What is our WATER BALANCE ?</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid" style="width: calc(100% + 24px)">
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #c8f8d0;
+                color: #2a7c78;
+                height: 515px;
+                padding: 16px;
+                box-sizing: border-box;
+              "
+            >
+              <div>
+                <div class="supply-text">Supply</div>
+
+                <div class="begining-text">
+                  Water available in the beginning of <%=current_month%>.
+                </div>
+                <div class="tcm-text"><%=supply_tcm%> TCM</div>
+
+                <div class="center-aligned-items mt-15">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/surfacewater.svg"
+                        alt="surfacewater"
+                        height="25px"
+                      /> -->
+
+                      <img
+                        alt="surfacewater"
+                        height="25px"
+                        src="<%=green_surfacewater_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Surfacewater</div>
+                    <div class="water-tcm"><%=supply_surfacewater%> TCM</div>
+                    <div class="plus-icon">
+                      <!-- <img src="/images/greenPlus.svg" alt="plus" /> -->
+
+                      <img alt="plus" src="<%=green_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/groundwater.svg"
+                        alt="surfacewater"
+                        height="60px"
+                      /> -->
+
+                      <img
+                        alt="soil & moisture"
+                        height="60px"
+                        src="<%=green_soilmoisture_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">
+                      Soil moisture & <br />
+                      Groundwater
+                    </div>
+                    <div class="water-tcm"><%=supply_soilgroundwater%> TCM</div>
+                    <div class="plus-icon">
+                      <!-- <img src="/images/greenPlus.svg" alt="plus" /> -->
+                      <img alt="plus" src="<%=green_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/rainfall.svg"
+                        alt="rainfall"
+                        height="40px"
+                      /> -->
+                      <img
+                        alt="rainfall"
+                        height="40px"
+                        src="<%=green_rainfall_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Rainfall</div>
+                    <div class="water-tcm"><%=supply_rainfall%> TCM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #f3d5ca;
+                height: 515px;
+                padding: 16px;
+                box-sizing: border-box;
+                color: rgba(0, 0, 0, 0.6);
+              "
+            >
+              <div>
+                <div class="demand-text">Demand</div>
+
+                <div class="begining-text">
+                  Water available in the beginning of <%=current_month%>.
+                </div>
+                <div class="tcm-text"><%=demand_tcm%> TCM</div>
+
+                <div class="center-aligned-items mt-15">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/domesticReq.svg"
+                        alt="surfacewater"
+                        height="40px"
+                      /> -->
+                      <img
+                        alt="surfacewater"
+                        height="40px"
+                        src="<%=red_domestic_requirement_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Domestic requirement</div>
+                    <div class="water-tcm">
+                      <%=demand_domestic_requirement%> TCM
+                    </div>
+                    <div class="plus-icon brown">
+                      <!-- <img src="/images/brownPlus.svg" alt="plus" /> -->
+
+                      <img src="<%=red_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/cropRequirement.svg"
+                        alt="surfacewater"
+                        height="50px"
+                      /> -->
+
+                      <img
+                        alt="crop req"
+                        height="50px"
+                        src="<%=red_crop_requirement_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Crop Requirement</div>
+                    <div class="water-tcm">
+                      <%=demand_crop_requirement%> TCM
+                    </div>
+                    <div class="plus-icon brown">
+                      <!-- <img src="/images/brownPlus.svg" alt="plus" /> -->
+                      <img src="<%=red_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items mt-15">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/evaporation.svg"
+                        alt="surfacewater"
+                        height="35px"
+                      /> -->
+
+                      <img
+                        alt="evaporation"
+                        height="35px"
+                        src="<%=red_evaporation_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">
+                      Evaporation & <br />
+                      Evapotranspiration
+                    </div>
+                    <div class="water-tcm"><%=demand_evaporation%> TCM</div>
+                    <div class="plus-icon brown">
+                      <!-- <img src="/images/brownPlus.svg" alt="plus" /> -->
+                      <img src="<%=red_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/surfaceRunoff.svg"
+                        alt="surfacewater"
+                        height="30px"
+                      /> -->
+
+                      <img
+                        alt="surface runoff"
+                        height="30px"
+                        src="<%=red_surface_runoff_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Surface Runoff</div>
+                    <div class="water-tcm"><%=demand_surface_runoff%> TCM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-grid">
+            <div
+              class="item"
+              style="
+                background: #e8e8e8;
+                height: 515px;
+                padding: 16px;
+                box-sizing: border-box;
+                color: rgba(0, 0, 0, 0.6);
+              "
+            >
+              <div>
+                <div class="water-balance-text">Water Balance</div>
+
+                <div class="begining-text">
+                  Water available in the beginning of <%=current_month%>.
+                </div>
+                <div class="tcm-text"><%=water_balance_tcm%> TCM</div>
+
+                <div class="center-aligned-items mt-15">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/surfacewaterG.svg"
+                        alt="surfacewater"
+                        height="25px"
+                      /> -->
+
+                      <img
+                        alt="surfacewater"
+                        height="25px"
+                        src="<%=grey_surfacewater_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Surfacewater</div>
+                    <div class="water-tcm"><%=supply_surfacewater%> TCM</div>
+                    <div class="plus-icon">
+                      <!-- <img src="/images/greyPlus.svg" alt="plus" /> -->
+
+                      <img src="<%=grey_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/groundwaterG.svg"
+                        alt="surfacewater"
+                        height="60px"
+                      /> -->
+
+                      <img
+                        alt="soil moisture"
+                        height="60px"
+                        src="<%=grey_soil_moisture_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">
+                      Soil moisture & <br />
+                      Groundwater
+                    </div>
+                    <div class="water-tcm">
+                      <%=water_balance_soilgroundwater%> TCM
+                    </div>
+                    <div class="plus-icon">
+                      <!-- <img src="/images/greyPlus.svg" alt="plus" /> -->
+                      <img src="<%=grey_plus_img%>" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="center-aligned-items">
+                  <div class="image-parent-div">
+                    <div class="image-div">
+                      <!-- <img
+                        src="/images/rainfallG.svg"
+                        alt="surfacewater"
+                        height="40px"
+                      /> -->
+
+                      <img
+                        alt="surfacewater"
+                        height="40px"
+                        src="<%=grey_rainfall_img%>"
+                      />
+                    </div>
+                  </div>
+                  <div class="contents-section">
+                    <div class="type-of-water">Rainfall</div>
+                    <div class="water-tcm"><%=water_balance_rainfall%> TCM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">8</div>
+      </div>
+    </div>
+    <!-- EIGHTH PAGE ENDS  -->
+
+    <!-- NINTH PAGE STARTS  -->
+
+    <div class="wrapper-seven">
+      <div class="water-balance-heading">
+        <h3>Glossary</h3>
+      </div>
+
+      <div class="box mainBoxForBorder" style="flex-grow: 1">
+        <div class="container-grid">
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{7}"
+            style="flex-basis: unset; width: 60%; max-width: 60%"
+          >
+            <div class="item" style="color: #2a7c78; box-shadow: unset">
+              <div
+                style="
+                  display: flex;
+                  background: #edf3f3;
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                  font-weight: bold;
+                "
+              >
+                <div style="width: 20%">Term</div>
+                <div style="width: 20%">Page No.</div>
+                <div style="width: 60%">Meaning</div>
+              </div>
+
+              <!-- first row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Water Lost</div>
+                <div style="width: 20%">2</div>
+                <div style="width: 60%">
+                  Total evaporation of water from waterbodies, Barren lands,
+                  Dense vegetation and Grasslands have been considered.
+                </div>
+              </div>
+              <!-- first row ends  -->
+              <!-- second row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Surface water</div>
+                <div style="width: 20%">4</div>
+                <div style="width: 60%">
+                  Volume of water in various water conservation structures as
+                  observed in satellite images obtained in the month of
+                  <span style="font-weight: bold"> <%= current_month %> </span>.
+                </div>
+              </div>
+              <!-- second row ends  -->
+              <!-- third row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Groundwater + Soil Moisture</div>
+                <div style="width: 20%">5</div>
+                <div style="width: 60%">
+                  The estimated volume of water computed using groundwater
+                  levels of observation wells measured n the service.
+                </div>
+              </div>
+              <!-- third row ends  -->
+              <!-- fourth row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">
+                  Crop water<br />
+                  requirement
+                </div>
+                <div style="width: 20%">6</div>
+                <div style="width: 60%">
+                  Total water that has been cosumed by the crops till<span
+                    style="font-weight: bold"
+                  >
+                    <%= current_month %>
+                  </span>
+                  .
+                </div>
+              </div>
+              <!-- fourth row ends  -->
+              <!-- fifth row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Domestic <br />Consumption</div>
+                <div style="width: 20%">7</div>
+                <div style="width: 60%">
+                  Amount of water consumed by Humans, Sheep, Cattle, Poultry &
+                  Other Industries as per the Indian Standard norms.
+                </div>
+              </div>
+              <!-- fifth row ends  -->
+              <!-- sixth row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Supply</div>
+                <div style="width: 20%">8</div>
+                <div style="width: 60%">
+                  Volume of water present in various forms like Surfacewater,
+                  Groundwater and Rainfall till
+                  <span style="font-weight: bold"> <%= current_month %> </span>
+                </div>
+              </div>
+              <!-- sixth row ends  -->
+              <!-- seventh row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Demand</div>
+                <div style="width: 20%">8</div>
+                <div style="width: 60%">
+                  Volume of water consumed for irrigation, drinking water
+                  purposes and total evaporation till
+                  <span style="font-weight: bold"> <%= current_month %> </span>
+                </div>
+              </div>
+              <!-- seventh row ends  -->
+              <!-- eightth row starts  -->
+              <div
+                style="
+                  display: flex;
+
+                  padding: 8px 4px;
+                  box-sizing: border-box;
+                  color: #2a7c78;
+                "
+              >
+                <div style="width: 20%">Water Balance</div>
+                <div style="width: 20%">8</div>
+                <div style="width: 60%">
+                  Volume of water remaining after the consumption (Supply -
+                  Demand) in
+                  <span style="font-weight: bold"><%= current_month %></span>
+                </div>
+              </div>
+              <!-- eightth row ends  -->
+            </div>
+          </div>
+
+          <div
+            class="item-grid"
+            item
+            xs="{2}"
+            sm="{4}"
+            md="{5}"
+            style="
+              display: flex;
+              justify-content: center;
+              flex-basis: unset;
+              width: 40%;
+              max-width: 40%;
+            "
+          >
+            <div
+              class="item"
+              style="
+                box-shadow: unset;
+                background: #c4e8e4;
+                border-top: 5px solid #74aba8;
+                height: 350px;
+                margin-top: 50px;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    width: 430px;
+
+                    padding: 12px;
+                    box-sizing: border-box;
+                  "
+                >
+                  <div
+                    style="
+                      margin-bottom: 15px;
+                      margin-top: 10px;
+                      color: #4b908e;
+                      font-size: 22px;
+                      font-weight: 600;
+                      border-bottom: 2px solid #74aba8;
+                      margin-bottom: 50px;
+                    "
+                  >
+                    Thank You.
+                  </div>
+
+                  <!-- div two starts  -->
+                  <div style="margin-top: 30px; margin-bottom: 30px">
+                    This report is presented to you by <br /><span
+                      style="font-weight: bold"
+                      >Ekatvam Innovations Pvt. Ltd.</span
+                    >
+                    The Data has been derived from Primary and Secondary
+                    Sources:
+                  </div>
+
+                  <div
+                    style="
+                      margin-top: 30px;
+                      display: flex;
+                      align-items: center;
+                      padding: 0 10px;
+                      box-sizing: border-box;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #2a7c78;
+                        width: 15px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      "
+                    ></div>
+                    <div>
+                      Primary Sources being the Field Visits conducted by Team
+                      Ekatvam in the Service.
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 30px;
+                      display: flex;
+                      align-items: center;
+                      padding: 0 10px;
+                      box-sizing: border-box;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #2a7c78;
+                        width: 12px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      "
+                    ></div>
+                    <div>
+                      Secondary Sources being the Satellite images and
+                      Government Records.
+                    </div>
+                  </div>
+
+                  <!-- div two ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageNoContainer">
+        <div class="pageNoBottom">
+          <div class="pageNoVillClus">
+            <div><%= village %>, <%= current_taluka %></div>
+          </div>
+          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+        </div>
+
+        <div class="pageNoCopyright">
+          Copyright © <%= current_year %> Ekatvam
+        </div>
+
+        <div class="pageNoCurrent">9</div>
+      </div>
+    </div>
+
+    <!-- NINTH PAGE ENDS  -->
+  </body>
+</html>
