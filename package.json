@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "ejs": "^3.1.8"
+    "ejs": "^3.1.8",
+    "puppeteer": "^19.6.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "generate:pdf": "node generate-pdf.js"
   }
 }
