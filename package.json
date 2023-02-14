@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "ejs": "^3.1.8",
-    "puppeteer": "^19.6.3"
+    "playwright": "^1.30.0"
   },
   "scripts": {
     "start": "node index.js",
