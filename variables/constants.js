@@ -1,7 +1,7 @@
 module.exports = {
   // PAGE 1
   name: 'Kundaliyara',
-  month: 'January',
+  month: 'Febraury',
   year: 2023,
   season: 'Kharif',
   taluka: 'Rajula',

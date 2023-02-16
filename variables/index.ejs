@@ -1794,11 +1794,11 @@
         <div>
           <div class="village-name" style="text-transform: uppercase">
             <!-- KUNDALIYARA -->
-            <%= village %>
+            <%= name%>
           </div>
           <div class="village-month" style="text-transform: uppercase">
             <!-- DECEMBER 2022 -->
-            <%= current_month %> <%= current_year %>
+            <%= month %> <%= year %>
           </div>
         </div>
       </div>
@@ -1810,14 +1810,14 @@
               Season - <br />
               <span style="margin-left: 7px; text-transform: uppercase">
                 <!-- KHARIF -->
-                <%= current_season %>
+                <%= season %>
               </span>
             </div>
             <div>
               Taluka - <br />
               <span style="margin-left: 7px; text-transform: uppercase">
                 <!-- RAJULA -->
-                <%= current_taluka %>
+                <%= taluka %>
               </span>
             </div>
           </div>
@@ -1900,7 +1900,7 @@
                     </div>
                     <div class="population-amount">
                       <!-- 1234 -->
-                      <%= village_population_humans %>
+                      <%= total_human %>
                     </div>
                     <div class="pop-name">Humans</div>
                   </div>
@@ -1914,9 +1914,7 @@
 
                       <img alt="cattle" height="30px" src="<%= cattle %>" />
                     </div>
-                    <div class="population-amount">
-                      <%= village_population_cattle %>
-                    </div>
+                    <div class="population-amount"><%= total_cattle %></div>
                     <div class="pop-name">Cattle</div>
                   </div>
                   <div style="text-align: center">
@@ -1924,9 +1922,7 @@
                       <!-- <img src="/images/sheep.svg" alt="humans" height="30px" /> -->
                       <img alt="sheep" height="30px" src="<%= sheep %>" />
                     </div>
-                    <div class="population-amount">
-                      <%= village_population_sheep %>
-                    </div>
+                    <div class="population-amount"><%= total_sheep %></div>
                     <div class="pop-name">Sheep</div>
                   </div>
                   <div style="text-align: center">
@@ -1939,9 +1935,7 @@
 
                       <img alt="poultry" height="35px" src="<%= poultry %>" />
                     </div>
-                    <div class="population-amount">
-                      <%= village_population_poultry %>
-                    </div>
+                    <div class="population-amount"><%= total_poultry %></div>
                     <div class="pop-name">Poultry</div>
                   </div>
                 </div>
@@ -1984,7 +1978,7 @@
                         "
                       >
                         <!-- 12 -->
-                        <%= minimum_temperature %>
+                        <%= temperature_min %>
                         <span
                           style="
                             font-size: 10px;
@@ -2010,7 +2004,7 @@
                         "
                       >
                         <!-- 12 -->
-                        <%= maximum_temperature %>
+                        <%= temperature_max %>
                         <span
                           style="
                             font-size: 10px;
@@ -2102,7 +2096,7 @@
                 <div
                   style="margin-top: 40px; text-align: center; font-size: 15px"
                 >
-                  *Estimated as per satellite image of year <%= current_year %>.
+                  *Estimated as per satellite image of year <%= year %>.
                 </div>
               </div>
             </div>
@@ -2130,7 +2124,7 @@
                     margin-bottom: 30px;
                   "
                 >
-                  <%= area_under_village %> Ha
+                  <%= area %> Ha
                   <span style="font-size: 13px; font-weight: normal">
                     (hectares)
                   </span>
@@ -3052,14 +3046,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">2</div>
       </div>
@@ -3086,10 +3078,10 @@
               <div class="four-header">
                 <div class="mr-right" style="min-width: 250px">
                   <div class="heading-water" style="font-size: 17px">
-                    Rainfall recieved till <%= current_month %>.
+                    Rainfall recieved till <%= month %>.
                   </div>
                   <div class="tcm-water">
-                    <%= rainfall_recieved %> mm
+                    <%= current_rainfall_tcm %> mm
                     <span style="font-size: 12px; font-weight: normal">
                       (milli meters)
                     </span>
@@ -3100,7 +3092,7 @@
                   <div class="heading-water" style="font-size: 17px">
                     Rainy Days
                   </div>
-                  <div class="tcm-water"><%= rainy_days %></div>
+                  <div class="tcm-water"><%= current_rainy_day %></div>
                 </div>
               </div>
               <div class="four-header">
@@ -3109,7 +3101,7 @@
                     Rainfall till now
                   </div>
                   <div class="tcm-water">
-                    <%= rainfall_till_now %> mm
+                    <%= current_rainfall_tcm_cumulative %> mm
                     <span style="font-size: 12px; font-weight: normal">
                       (milli meters)
                     </span>
@@ -3170,7 +3162,7 @@
                         Average Village Rainfall
                       </div>
                       <div class="tcm-water">
-                        <%= avg_village_rainfall %> mm
+                        <%= average_rainfall_tcm %> mm
                         <span style="font-size: 12px; font-weight: normal">
                           (milli meters)
                         </span>
@@ -3180,7 +3172,7 @@
                       <div class="heading-water" style="font-size: 17px">
                         Avg. Rainy Days
                       </div>
-                      <div class="tcm-water"><%= avg_rainy_days %></div>
+                      <div class="tcm-water"><%= average_rainy_day %></div>
                     </div>
                   </div>
 
@@ -3188,9 +3180,7 @@
                     <div>
                       <div class="heading-water" style="font-size: 15px">
                         Overall Rainfall recieved till
-                        <span style="font-weight: bold"
-                          ><%= current_month %></span
-                        >
+                        <span style="font-weight: bold"><%= month %></span>
                         is
                         <span style="color: red; font-weight: bold">
                           <%= less_than %> <%= current_percentage_rainfall %> %
@@ -3412,14 +3402,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">3</div>
       </div>
@@ -3443,15 +3431,15 @@
               <div class="four-header">
                 <div class="mr-right">
                   <div class="heading-water" style="font-size: 17px">
-                    Total runoff generated till <%= current_month %>.
+                    Total runoff generated till <%= month %>.
                   </div>
-                  <div class="tcm-water"><%= total_runoff_generated %> mm</div>
+                  <div class="tcm-water"><%= runoff_tcm %> mm</div>
                 </div>
               </div>
               <div class="four-header">
                 <div>
                   <div class="heading-area" style="font-size: 17px">
-                    Surfacewater bodies filled as of <%= current_month %>.
+                    Surfacewater bodies filled as of <%= month %>.
                   </div>
                   <div class="ha-area"><%= surfacewaterbodies_filled %></div>
                 </div>
@@ -3459,9 +3447,11 @@
               <div class="four-header">
                 <div>
                   <div class="heading-area" style="font-size: 17px">
-                    Total Surfacewater as of <%= current_month %>.
+                    Total Surfacewater as of <%= month %>.
                   </div>
-                  <div class="ha-area"><%= total_surfacewater %> TCM</div>
+                  <div class="ha-area">
+                    <%= total_surface_water_storage %> TCM
+                  </div>
                 </div>
               </div>
 
@@ -3677,7 +3667,7 @@
                         align-items: center;
                       "
                     >
-                      <%= check_dam %>
+                      <%= total_check_dam %>
                     </div>
                   </div>
                   <div style="display: flex">
@@ -3715,7 +3705,7 @@
                         align-items: center;
                       "
                     >
-                      <%= percolation_tank %>
+                      <%= total_percolation_tank %>
                     </div>
                   </div>
                   <div style="display: flex">
@@ -3753,7 +3743,7 @@
                         align-items: center;
                       "
                     >
-                      <%= village_pond %>
+                      <%= total_village_pond %>
                     </div>
                   </div>
                   <div style="display: flex">
@@ -3791,7 +3781,7 @@
                         align-items: center;
                       "
                     >
-                      <%= farm_pond %>
+                      <%= total_farm_pond %>
                     </div>
                   </div>
                 </div>
@@ -3839,14 +3829,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">4</div>
       </div>
@@ -3887,11 +3875,9 @@
               <div class="four-header">
                 <div class="mr-right">
                   <div class="heading-water" style="font-size: 17px">
-                    Soil Moisture + Ground Water in <%= current_month %>
+                    Soil Moisture + Ground Water in <%= month %>
                   </div>
-                  <div class="tcm-water">
-                    <%= soil_moisture_groundwater %> mm
-                  </div>
+                  <div class="tcm-water"><%= total_soil_moisture %> mm</div>
                 </div>
 
                 <!-- {/* FOR SEVEN  */} -->
@@ -3911,7 +3897,7 @@
                         src="<%= obs_wells_img %>"
                       />
                     </div>
-                    <div><%= obs_wells %> mm</div>
+                    <div><%= total_well %> mm</div>
                   </div>
                 </div>
                 <!-- {/* FOR SEVEN  */} -->
@@ -3922,7 +3908,7 @@
                     class="heading-area"
                     style="font-size: 17px; margin-top: 10px"
                   >
-                    Average water level as of <%= current_month %>.
+                    Average water level as of <%= month %>.
                   </div>
                   <div class="ha-area">
                     <%= avg_water_level %> m Bgl
@@ -4144,14 +4130,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">5</div>
       </div>
@@ -4169,7 +4153,7 @@
       <div class="four-header">
         <div class="mr-right">
           <div class="heading-water">
-            Water consumed by crops till <%= current_month %>
+            Water consumed by crops till <%= month %>
           </div>
           <div class="tcm-water"><%= water_consumed_by_crops %> TCM</div>
         </div>
@@ -4913,14 +4897,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">6</div>
       </div>
@@ -4948,10 +4930,10 @@
               <div class="four-header">
                 <div class="mr-right">
                   <div class="heading-water" style="font-size: 17px">
-                    Domestic Water consumed till <%= current_month %>
+                    Domestic Water consumed till <%= month %>
                   </div>
                   <div class="tcm-water">
-                    <%= domestic_water_consumed %> TCM
+                    <%= total_domestic_water_comsumption %> TCM
                   </div>
                 </div>
               </div>
@@ -4964,7 +4946,7 @@
                     Annual consumption of the Village
                   </div>
                   <div class="ha-area">
-                    <%= annual_consumption_village %> TCM
+                    <%= total_annual_water_comsumption %> TCM
                   </div>
                 </div>
               </div>
@@ -5145,7 +5127,7 @@
                           font-weight: bold;
                         "
                       >
-                        <%= water_consumed_by_humans %>%
+                        <%= total_human_water_consumption %>%
                       </div>
                       <div>Humans</div>
                     </div>
@@ -5169,7 +5151,7 @@
                           font-weight: bold;
                         "
                       >
-                        <%= water_consumed_by_cattle%>%
+                        <%= total_cattle_water_consumption%>%
                       </div>
                       <div style="text-align: center">Cattle</div>
                     </div>
@@ -5193,7 +5175,7 @@
                           font-weight: bold;
                         "
                       >
-                        <%= water_consumed_by_sheep%>%
+                        <%= total_sheep_water_consumption%>%
                       </div>
                       <div>Sheep</div>
                     </div>
@@ -5221,7 +5203,7 @@
                           font-weight: bold;
                         "
                       >
-                        <%= water_consumed_by_poultry%>%
+                        <%= total_poultry_water_consumption%>%
                       </div>
                       <div>Poultry</div>
                     </div>
@@ -5246,7 +5228,7 @@
                           font-weight: bold;
                         "
                       >
-                        <%= water_consumed_by_industries%>%
+                        <%= total_industry_water_consumption %>%
                       </div>
                       <div>Industries</div>
                     </div>
@@ -5268,27 +5250,27 @@
                   >
                     <div>
                       <div style="font-size: 22px; font-weight: bold">
-                        <%= population_humans%>
+                        <%= total_human%>
                       </div>
                     </div>
                     <div>
                       <div style="font-size: 22px; font-weight: bold">
-                        <%= population_cattle%>
+                        <%= total_cattle%>
                       </div>
                     </div>
                     <div>
                       <div style="font-size: 22px; font-weight: bold">
-                        <%= population_sheep%>
+                        <%= total_sheep%>
                       </div>
                     </div>
                     <div>
                       <div style="font-size: 22px; font-weight: bold">
-                        <%= population_poultry%>
+                        <%= total_poultry%>
                       </div>
                     </div>
                     <div>
                       <div style="font-size: 22px; font-weight: bold">
-                        <%= population_industries%>
+                        <%= total_industry%>
                       </div>
                     </div>
                   </div>
@@ -5304,14 +5286,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">7</div>
       </div>
@@ -5341,7 +5321,7 @@
                 <div class="supply-text">Supply</div>
 
                 <div class="begining-text">
-                  Water available in the beginning of <%=current_month%>.
+                  Water available in the beginning of <%=month%>.
                 </div>
                 <div class="tcm-text"><%=supply_tcm%> TCM</div>
 
@@ -5440,7 +5420,7 @@
                 <div class="demand-text">Demand</div>
 
                 <div class="begining-text">
-                  Water available in the beginning of <%=current_month%>.
+                  Water available in the beginning of <%=month%>.
                 </div>
                 <div class="tcm-text"><%=demand_tcm%> TCM</div>
 
@@ -5569,7 +5549,7 @@
                 <div class="water-balance-text">Water Balance</div>
 
                 <div class="begining-text">
-                  Water available in the beginning of <%=current_month%>.
+                  Water available in the beginning of <%=month%>.
                 </div>
                 <div class="tcm-text"><%=water_balance_tcm%> TCM</div>
 
@@ -5661,14 +5641,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">8</div>
       </div>
@@ -5741,7 +5719,7 @@
                 <div style="width: 60%">
                   Volume of water in various water conservation structures as
                   observed in satellite images obtained in the month of
-                  <span style="font-weight: bold"> <%= current_month %> </span>.
+                  <span style="font-weight: bold"> <%= month %> </span>.
                 </div>
               </div>
               <!-- second row ends  -->
@@ -5782,7 +5760,7 @@
                   Total water that has been cosumed by the crops till<span
                     style="font-weight: bold"
                   >
-                    <%= current_month %>
+                    <%= month %>
                   </span>
                   .
                 </div>
@@ -5821,7 +5799,7 @@
                 <div style="width: 60%">
                   Volume of water present in various forms like Surfacewater,
                   Groundwater and Rainfall till
-                  <span style="font-weight: bold"> <%= current_month %> </span>
+                  <span style="font-weight: bold"> <%= month %> </span>
                 </div>
               </div>
               <!-- sixth row ends  -->
@@ -5840,7 +5818,7 @@
                 <div style="width: 60%">
                   Volume of water consumed for irrigation, drinking water
                   purposes and total evaporation till
-                  <span style="font-weight: bold"> <%= current_month %> </span>
+                  <span style="font-weight: bold"> <%= month %> </span>
                 </div>
               </div>
               <!-- seventh row ends  -->
@@ -5859,7 +5837,7 @@
                 <div style="width: 60%">
                   Volume of water remaining after the consumption (Supply -
                   Demand) in
-                  <span style="font-weight: bold"><%= current_month %></span>
+                  <span style="font-weight: bold"><%= month %></span>
                 </div>
               </div>
               <!-- eightth row ends  -->
@@ -5981,14 +5959,12 @@
       <div class="pageNoContainer">
         <div class="pageNoBottom">
           <div class="pageNoVillClus">
-            <div><%= village %>, <%= current_taluka %></div>
+            <div><%= name%>, <%= taluka %></div>
           </div>
-          <div class="pageNoDec"><%= current_month %> <%= current_year %></div>
+          <div class="pageNoDec"><%= month %> <%= year %></div>
         </div>
 
-        <div class="pageNoCopyright">
-          Copyright © <%= current_year %> Ekatvam
-        </div>
+        <div class="pageNoCopyright">Copyright © <%= year %> Ekatvam</div>
 
         <div class="pageNoCurrent">9</div>
       </div>

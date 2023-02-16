@@ -23,11 +23,11 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     ekatvam_logo: images.ekatvam_logo,
 
     // PAGE 1 consts
-    village: constants.name,
-    current_month: constants.month,
-    current_year: constants.year,
-    current_season: constants.season,
-    current_taluka: constants.taluka,
+    name: constants.name,
+    month: constants.month,
+    year: constants.year,
+    season: constants.season,
+    taluka: constants.taluka,
 
     //PAGE 2 Images
     humans: images.humans,
@@ -39,14 +39,14 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     page2_map: images.page2_map,
 
     // PAGE 2 consts
-    village_population_humans: constants.total_human,
-    village_population_cattle: constants.total_cattle,
-    village_population_sheep: constants.total_sheep,
-    village_population_poultry: constants.total_poultry,
-    minimum_temperature: constants.temperature_min,
-    maximum_temperature: constants.temperature_max,
+    total_human: constants.total_human,
+    total_cattle: constants.total_cattle,
+    total_sheep: constants.total_sheep,
+    total_poultry: constants.total_poultry,
+    temperature_min: constants.temperature_min,
+    temperature_max: constants.temperature_max,
     wind_speed: constants.wind_speed,
-    area_under_village: constants.area,
+    area: constants.area,
 
     // page 2 graph values
     data_page_2: graphDatas.data_page_2,
@@ -58,12 +58,12 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     arrow: images.arrow,
 
     // page 3 consts
-    rainfall_recieved: constants.current_rainfall_tcm,
-    rainfall_till_now: constants.current_rainfall_tcm_cumulative,
-    rainy_days: constants.current_rainy_day,
+    current_rainfall_tcm: constants.current_rainfall_tcm,
+    current_rainfall_tcm_cumulative: constants.current_rainfall_tcm_cumulative,
+    current_rainy_day: constants.current_rainy_day,
     total_rainwater: constants.total_rainwater,
-    avg_village_rainfall: constants.average_rainfall_tcm,
-    avg_rainy_days: constants.average_rainy_day,
+    average_rainfall_tcm: constants.average_rainfall_tcm,
+    average_rainy_day: constants.average_rainy_day,
     less_than: constants.less_than,
     more_than: constants.more_than,
     current_percentage_rainfall: constants.current_percentage_rainfall,
@@ -84,22 +84,22 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     surface_body_locations_map_img: images.surface_body_locations_map_img,
 
     // page 4 consts
-    total_runoff_generated: constants.runoff_tcm,
+    runoff_tcm: constants.runoff_tcm,
     surfacewaterbodies_filled: constants.surfacewaterbodies_filled,
-    total_surfacewater: constants.total_surface_water_storage,
-    check_dam: constants.total_check_dam,
-    percolation_tank: constants.total_percolation_tank,
-    village_pond: constants.total_village_pond,
-    farm_pond: constants.total_farm_pond,
+    total_surface_water_storage: constants.total_surface_water_storage,
+    total_check_dam: constants.total_check_dam,
+    total_percolation_tank: constants.total_percolation_tank,
+    total_village_pond: constants.total_village_pond,
+    total_farm_pond: constants.total_farm_pond,
 
     // page 5 images
     obs_wells_img: images.obs_wells_img,
     map_img_page_5: images.map_img_page_5,
 
     // page 5 consts
-    soil_moisture_groundwater: constants.total_soil_moisture,
+    total_soil_moisture: constants.total_soil_moisture,
     avg_water_level: constants.avg_water_level,
-    obs_wells: constants.total_well,
+    total_well: constants.total_well,
 
     // page 6 images
     mango: images.mango,
@@ -123,18 +123,20 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     industries_img: images.industries_img,
 
     // page 7 consts
-    domestic_water_consumed: constants.total_domestic_water_comsumption,
-    annual_consumption_village: constants.total_annual_water_comsumption,
-    water_consumed_by_humans: constants.total_human_water_consumption,
-    water_consumed_by_cattle: constants.total_cattle_water_consumption,
-    water_consumed_by_sheep: constants.total_sheep_water_consumption,
-    water_consumed_by_poultry: constants.total_poultry_water_consumption,
-    water_consumed_by_industries: constants.total_industry_water_consumption,
-    population_humans: constants.total_human,
-    population_cattle: constants.total_cattle,
-    population_sheep: constants.total_sheep,
-    population_poultry: constants.total_poultry,
-    population_industries: constants.total_industry,
+    total_domestic_water_comsumption:
+      constants.total_domestic_water_comsumption,
+    total_annual_water_comsumption: constants.total_annual_water_comsumption,
+    total_human_water_consumption: constants.total_human_water_consumption,
+    total_cattle_water_consumption: constants.total_cattle_water_consumption,
+    total_sheep_water_consumption: constants.total_sheep_water_consumption,
+    total_poultry_water_consumption: constants.total_poultry_water_consumption,
+    total_industry_water_consumption:
+      constants.total_industry_water_consumption,
+    total_human: constants.total_human,
+    total_cattle: constants.total_cattle,
+    total_sheep: constants.total_sheep,
+    total_poultry: constants.total_poultry,
+    total_industry: constants.total_industry,
 
     // page 8 images
     green_surfacewater_img: images.green_surfacewater_img,
