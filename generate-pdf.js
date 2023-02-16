@@ -13,6 +13,7 @@ const { chromium } = require('playwright');
     height: 850,
     width: 1400,
     margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' },
+    printBackground: true,
   });
 
   await browser.close();

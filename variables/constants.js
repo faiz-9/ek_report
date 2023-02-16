@@ -1,150 +1,150 @@
 module.exports = {
   // PAGE 1
-  village: "Kundaliyara",
-  current_month: "January",
-  current_year: 2023,
-  current_season: "Kharif",
-  current_taluka: "Rajula",
+  name: 'Kundaliyara',
+  month: 'January',
+  year: 2023,
+  season: 'Kharif',
+  taluka: 'Rajula',
 
   // PAGE 2
-  village_population_humans: 12,
-  village_population_cattle: 123,
-  village_population_sheep: 131,
-  village_population_poultry: 1,
+  total_human: 12,
+  total_cattle: 123,
+  total_sheep: 131,
+  total_poultry: 1,
 
-  minimum_temperature: 10,
-  maximum_temperature: 33,
-  wind_speed: 3312,
-  area_under_village: 47,
+  temperature_min: 10,
+  temperature_max: 33,
+  wind_speed: 3312, //pending
+  area: 47,
 
   //  PAGE 3
-  rainfall_recieved: 231,
-  rainfall_till_now: 32,
-  rainy_days: 29,
-  total_rainwater: 3325,
-  avg_village_rainfall: 124,
-  avg_rainy_days: 73,
-  less_than: "LESS than",
-  more_than: "MORE than",
-  current_percentage_rainfall: 80,
+  current_rainfall_tcm: 231,
+  current_rainfall_tcm_cumulative: 32,
+  current_rainy_day: 29,
+  total_rainwater: 3325, //pending
+  average_rainfall_tcm: 124,
+  average_rainy_day: 73,
+  less_than: 'LESS than', //pending
+  more_than: 'MORE than', //pending
+  current_percentage_rainfall: 80, //pending
 
   //   PAGE 4
-  total_runoff_generated: 323,
-  surfacewaterbodies_filled: 39,
-  total_surfacewater: 739,
-  check_dam: 11,
-  percolation_tank: 12,
-  village_pond: 13,
-  farm_pond: 14,
+  runoff_tcm: 323,
+  surfacewaterbodies_filled: 39, //pending
+  total_surface_water_storage: 739,
+  total_check_dam: 11,
+  total_percolation_tank: 12,
+  total_village_pond: 13,
+  total_farm_pond: 14,
 
   //    PAGE 5
-  soil_moisture_groundwater: 199,
-  avg_water_level: 82,
-  obs_wells: 683,
+  total_soil_moisture: 199,
+  avg_water_level: 82, //pending
+  total_well: 683,
 
   //PAGE 6
-  water_consumed_by_crops: 5839,
-  area_under_crops: 3321,
+  crop_water_requirement: 5839,
+  total_crop_area: 3321,
 
   map_values_kharif: [
     {
-      current_percentage: 23,
-      current_ha: 431,
-      current_tcm: 901,
+      percentage: 23,
+      ha: 431,
+      tcm: 901,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
     {
-      current_percentage: 94,
-      current_ha: 439,
-      current_tcm: 902,
+      percentage: 94,
+      ha: 439,
+      tcm: 902,
     },
   ],
   map_values_kharif_row2: [
     {
-      current_percentage: 63,
-      current_ha: 431,
-      current_tcm: 901,
+      percentage: 63,
+      ha: 431,
+      tcm: 901,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
   ],
   map_values_kharif_row3: [
     {
-      current_percentage: 63,
-      current_ha: 431,
-      current_tcm: 901,
+      percentage: 63,
+      ha: 431,
+      tcm: 901,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
     {
-      current_percentage: 64,
-      current_ha: 433,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 433,
+      tcm: 902,
     },
   ],
   map_values_kharif_row4: [
     {
-      current_percentage: 63,
-      current_ha: 431,
-      current_tcm: 901,
+      percentage: 63,
+      ha: 431,
+      tcm: 901,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
     {
-      current_percentage: 64,
-      current_ha: 432,
-      current_tcm: 902,
+      percentage: 64,
+      ha: 432,
+      tcm: 902,
     },
   ],
 
   map_values_rabi: [
     {
-      current_percentage: 84,
-      current_ha: 133,
-      current_tcm: 202,
+      percentage: 84,
+      ha: 133,
+      tcm: 202,
     },
   ],
   map_values_summer: [
     {
-      current_percentage: 84,
-      current_ha: 133,
-      current_tcm: 202,
+      percentage: 84,
+      ha: 133,
+      tcm: 202,
     },
   ],
 
   //   page 7
-  domestic_water_consumed: 3891,
-  annual_consumption_village: 2210,
-  water_consumed_by_humans: 67,
-  water_consumed_by_cattle: 32,
-  water_consumed_by_sheep: 48,
-  water_consumed_by_poultry: 19,
-  water_consumed_by_industries: 91,
-  population_humans: 2144,
-  population_cattle: 1921,
-  population_sheep: 9212,
-  population_poultry: 3410,
-  population_industries: 1109,
+  total_domestic_water_comsumption: 3891,
+  total_annual_water_comsumption: 2210,
+  total_human_water_consumption: 67,
+  total_cattle_water_consumption: 32,
+  total_sheep_water_consumption: 48,
+  total_poultry_water_consumption: 19,
+  total_industry_water_consumption: 91,
+  total_human: 2144,
+  total_cattle: 1921,
+  total_sheep: 9212,
+  total_poultry: 3410,
+  total_industry: 1109,
 
-  //page 8
+  //page 8 (As it is)
   supply_tcm: 2231,
   supply_surfacewater: 4462,
   supply_soilgroundwater: 1252,
