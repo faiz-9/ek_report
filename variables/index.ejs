@@ -121,17 +121,18 @@
       }
 
       .img1 {
-        width: 30%;
-        background: #d9d9d9;
+        width: 32%;
+
         margin-right: 10px;
         height: 300px;
       }
       .img2 {
-        width: 50%;
-        background: #d9d9d9;
+        width: 48%;
+
         margin-right: 10px;
       }
       .img3 {
+        height: 320px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1829,11 +1830,31 @@
       </div>
 
       <div class="fouth-images-box">
-        <div class="img1"></div>
-        <div class="img2"></div>
+        <div class="img1">
+          <div style="width: 100%">
+            <img
+              style="object-fit: cover"
+              src="<%= landing_image_2_url %>"
+              alt="landing page img 2"
+              height="320px"
+              width="100%"
+            />
+          </div>
+        </div>
+        <div class="img2">
+          <div style="width: 100%">
+            <img
+              style="object-fit: cover"
+              src="<%= landing_image_1_url %>"
+              alt="landing page img 1"
+              height="320px"
+              width="100%"
+            />
+          </div>
+        </div>
         <div class="img3">
           <div>
-            <div style="margin-bottom: 25px; font-size: 18px; margin-top: 10px">
+            <div style="margin-bottom: 25px; font-size: 18px; margin-top: 15px">
               Collaboration with -
             </div>
             <div>

@@ -17,6 +17,8 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
   //   const html = ejs.render(data, { name });
   const html = ejs.render(data, {
     // PAGE 1 Images
+    landing_image_1_url: images.landing_image_1_url,
+    landing_image_2_url: images.landing_image_2_url,
     collaboration_image: images.collaboration_image,
     plus_image: images.plus_image,
     midas_image: images.midas_image,
