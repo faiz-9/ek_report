@@ -138,11 +138,17 @@ module.exports = {
   total_sheep_water_consumption: 48,
   total_poultry_water_consumption: 19,
   total_industry_water_consumption: 91,
-  total_human: 2144,
+  total_human: 1144,
   total_cattle: 1921,
   total_sheep: 9212,
   total_poultry: 3410,
   total_industry: 1109,
+
+  human_tcm: 13,
+  cattle_tcm: 14,
+  sheep_tcm: 15,
+  poultry_tcm: 16,
+  total_village_population: 3211,
 
   //page 8 (As it is)
   supply_tcm: 2231,

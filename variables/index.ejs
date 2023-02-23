@@ -4945,13 +4945,13 @@
             xs="{2}"
             sm="{4}"
             md="{7}"
-            style="flex-basis: unset; width: 45%; max-width: 45%"
+            style="flex-basis: unset; width: 36%; max-width: 36%"
           >
             <div class="item" style="color: #2a7c78; box-shadow: unset">
               <div class="four-header">
                 <div class="mr-right">
                   <div class="heading-water" style="font-size: 17px">
-                    Domestic Water consumed till <%= month %>
+                    Domestic Water consumed in <%= month %>
                   </div>
                   <div class="tcm-water">
                     <%= total_domestic_water_comsumption %> TCM
@@ -4971,111 +4971,17 @@
                   </div>
                 </div>
               </div>
-
-              <div style="display: flex">
-                <div style="height: 200px">
+              <div class="four-header">
+                <div>
                   <div
-                    style="
-                      text-align: center;
-                      margin-top: 50px;
-                      margin-bottom: 30px;
-                      color: #6e8482;
-                    "
+                    class="heading-area"
+                    style="font-size: 17px; margin-top: 10px"
                   >
-                    Pie chart showing Annual Domestic <br />
-                    consumption
+                    Total Village Population
                   </div>
-                  <canvas id="myChartPie"></canvas>
-                </div>
-
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-left: 100px;
-                    margin-top: 100px;
-                  "
-                >
-                  <div
-                    style="
-                      background: #287c78;
-                      border-radius: 100%;
-                      width: 12px;
-                      height: 12px;
-                      margin-right: 10px;
-                    "
-                  ></div>
-
-                  <div>Overall Water Consumption</div>
+                  <div class="ha-area"><%= total_village_population %></div>
                 </div>
               </div>
-              <script>
-                var ctx = document
-                  .getElementById('myChartPie')
-                  .getContext('2d');
-                var myCharts = new Chart(ctx, {
-                  type: 'pie',
-                  data: {
-                    labels: ['Red', 'Blue'],
-                    datasets: [
-                      {
-                        label: '# of Votes',
-                        data: [60, 40],
-                        backgroundColor: ['#287C78', '#D9D9D9'],
-                      },
-                    ],
-                  },
-                  options: {
-                    plugins: {
-                      datalabels: {
-                        display: true,
-                        formatter: (value, ctx) => {
-                          let sum = 0;
-                          let dataArr = ctx.chart.data.datasets[0].data;
-                          dataArr.map((data) => {
-                            sum += data;
-                          });
-                          let percentage =
-                            ((value * 100) / sum).toFixed(2) + '%';
-                          return percentage;
-                        },
-                        color: '#fff',
-                      },
-                    },
-
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    legend: {
-                      display: false,
-                    },
-                    tooltips: {
-                      callbacks: {
-                        label: function (tooltipItem, data) {
-                          var allData =
-                            data.datasets[tooltipItem.datasetIndex].data;
-                          var tooltipLabel = data.labels[tooltipItem.index];
-                          var tooltipData = allData[tooltipItem.index];
-                          var total = 0;
-                          for (var i in allData) {
-                            total += allData[i];
-                          }
-                          var tooltipPercentage = Math.round(
-                            (tooltipData / total) * 100
-                          );
-                          return (
-                            tooltipLabel +
-                            ': ' +
-                            tooltipData +
-                            ' (' +
-                            tooltipPercentage +
-                            '%)'
-                          );
-                        },
-                      },
-                    },
-                  },
-                });
-              </script>
             </div>
           </div>
 
@@ -5087,31 +4993,24 @@
             md="{5}"
             style="
               display: flex;
-              justify-content: center;
+              justify-content: flex-start;
               flex-basis: unset;
-              width: 55%;
-              max-width: 55%;
+              width: 64%;
+              max-width: 64%;
             "
           >
             <div
               class="item"
               style="
                 box-shadow: unset;
-                border: 1px solid black;
-                height: 330px;
-                margin-top: 50px;
+
+                margin-top: 10px;
+                width: 100%;
               "
             >
-              <div>
-                <div
-                  style="
-                    width: 500px;
-
-                    padding: 12px;
-                    box-sizing: border-box;
-                  "
-                >
-                  <div
+              <div style="display: flex">
+                <div style="padding: 12px; box-sizing: border-box">
+                  <!-- <div
                     style="
                       margin-bottom: 15px;
                       margin-top: 10px;
@@ -5119,184 +5018,277 @@
                     "
                   >
                     Water is consumed by,
-                  </div>
+                  </div> -->
 
-                  <!-- div one  -->
+                  <div style="display: flex">
+                    <div>
+                      <div
+                        style="
+                          text-align: center;
+                          margin-top: 10px;
+                          margin-bottom: 40px;
+                          color: #6e8482;
+                          font-size: 12px;
+                        "
+                      >
+                        Pie chart showing Monthly Domestic consumption
+                      </div>
+                      <canvas id="myChartPie" style="height: 240px"></canvas>
+                    </div>
+
+                    <!-- <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        margin-left: 100px;
+                        margin-top: 100px;
+                      "
+                    >
+                      <div
+                        style="
+                          background: #287c78;
+                          border-radius: 100%;
+                          width: 12px;
+                          height: 12px;
+                          margin-right: 10px;
+                        "
+                      ></div>
+
+                      <div>Overall Water Consumption</div>
+                    </div> -->
+                  </div>
+                  <div>
+                    <script>
+                      var totalPercentage = 100; // Total percentage
+                      var usedPercentage = [40, 20, 1, 9]; // Used percentage
+                      var remainingPercentage =
+                        totalPercentage -
+                        usedPercentage.reduce((a, b) => a + b, 0); // Calculate remaining percentage
+
+                      var ctx = document
+                        .getElementById('myChartPie')
+                        .getContext('2d');
+                      var myCharts = new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                          labels: [
+                            'Humans',
+                            'Cattle',
+                            'Sheep',
+                            'Poultry',
+                            'Other',
+                          ],
+                          datasets: [
+                            {
+                              label: '# of Votes',
+
+                              data: [...usedPercentage, remainingPercentage],
+                              backgroundColor: [
+                                '#3388B8',
+                                '#E97C2E',
+                                '#6DCA41',
+                                '#D44040',
+                                '#D9D9D9',
+                              ],
+                            },
+                          ],
+                        },
+                        options: {
+                          plugins: {
+                            datalabels: {
+                              display: true,
+                              formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map((data) => {
+                                  sum += data;
+                                });
+                                let percentage =
+                                  ((value * 100) / sum).toFixed(2) + '%';
+                                return percentage;
+                              },
+                              color: '#fff',
+                            },
+                          },
+
+                          responsive: true,
+                          maintainAspectRatio: false,
+                          legend: {
+                            display: false,
+                          },
+                          tooltips: {
+                            callbacks: {
+                              label: function (tooltipItem, data) {
+                                var allData =
+                                  data.datasets[tooltipItem.datasetIndex].data;
+                                var tooltipLabel =
+                                  data.labels[tooltipItem.index];
+                                var tooltipData = allData[tooltipItem.index];
+                                var total = 0;
+                                for (var i in allData) {
+                                  total += allData[i];
+                                }
+                                var tooltipPercentage = Math.round(
+                                  (tooltipData / total) * 100
+                                );
+                                return (
+                                  tooltipLabel +
+                                  ': ' +
+                                  tooltipData +
+                                  ' (' +
+                                  tooltipPercentage +
+                                  '%)'
+                                );
+                              },
+                            },
+                          },
+                        },
+                      });
+                    </script>
+                  </div>
+                </div>
+
+                <div
+                  class="right-new-container"
+                  style="margin-left: 25px; margin-top: 30px"
+                >
                   <div
                     style="
-                      padding: 2px 12px;
-                      display: flex;
-                      justify-content: space-between;
-                      color: #6e8482;
+                      margin-top: 15px;
+                      margin-bottom: 30px;
+                      color: #000000;
+                      font-size: 13px;
                     "
                   >
-                    <div>
-                      <div style="height: 65px">
-                        <!-- <img
-                          src="/images/humans7.svg"
-                          height="50px"
-                          alt="humans"
-                        /> -->
+                    Water is consumed by,
+                  </div>
 
-                        <img height="50px" alt="humans" src="<%=humans_img%>" />
-                      </div>
-
-                      <div
-                        style="
-                          text-align: center;
-                          font-size: 22px;
-                          font-weight: bold;
-                        "
-                      >
-                        <%= total_human_water_consumption %>%
-                      </div>
-                      <div>Humans</div>
-                    </div>
-                    <div>
-                      <div
-                        style="height: 65px; display: flex; align-items: center"
-                      >
-                        <!-- <img
-                          src="/images/cattle7.svg"
-                          height="40px"
-                          alt="humans"
-                        /> -->
-
-                        <img height="40px" alt="cattle" src="<%=cattle_img%>" />
-                      </div>
-
-                      <div
-                        style="
-                          text-align: center;
-                          font-size: 22px;
-                          font-weight: bold;
-                        "
-                      >
-                        <%= total_cattle_water_consumption%>%
-                      </div>
-                      <div style="text-align: center">Cattle</div>
-                    </div>
-                    <div>
-                      <div
-                        style="height: 65px; display: flex; align-items: center"
-                      >
-                        <!-- <img
-                          src="/images/sheep7.svg"
-                          height="40px"
-                          alt="humans"
-                        /> -->
-
-                        <img height="40px" alt="sheep" src="<%=sheep_img%>" />
-                      </div>
-
-                      <div
-                        style="
-                          text-align: center;
-                          font-size: 22px;
-                          font-weight: bold;
-                        "
-                      >
-                        <%= total_sheep_water_consumption%>%
-                      </div>
-                      <div>Sheep</div>
-                    </div>
-                    <div>
-                      <div
-                        style="height: 65px; display: flex; align-items: center"
-                      >
-                        <!-- <img
-                          src="/images/poultry7.svg"
-                          height="50px"
-                          alt="humans"
-                        /> -->
-
+                  <div class="page-seven-image-container">
+                    <div style="display: flex; align-items: center">
+                      <div>
                         <img
                           height="50px"
+                          width="50px"
+                          alt="humans"
+                          src="<%=humans_blue_img%>"
+                        />
+                      </div>
+
+                      <div
+                        style="margin-left: 18px; font-size: 14px; color:'#287C78"
+                      >
+                        <div style="margin-bottom: 5px">
+                          Humans
+                          <span style="font-size: 9px"
+                            >(<%= total_human%>)</span
+                          >
+                        </div>
+                        <div style="font-weight: bold">
+                          <%= total_human_water_consumption %>% - <%=
+                          human_tcm%> TCM
+                        </div>
+                      </div>
+                    </div>
+                    <!-- NEW  -->
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 38px;
+                      "
+                    >
+                      <div>
+                        <img
+                          style="object-fit: contain"
+                          height="50px"
+                          width="50px"
+                          alt="cattle"
+                          src="<%=cattle_orange_img%>"
+                        />
+                      </div>
+
+                      <div
+                        style="margin-left: 18px; font-size: 14px; color:'#287C78"
+                      >
+                        <div style="margin-bottom: 5px">
+                          Cattle
+                          <span style="font-size: 9px"
+                            >(<%= total_cattle%>)</span
+                          >
+                        </div>
+                        <div style="font-weight: bold">
+                          <%= total_cattle_water_consumption%>% - <%=
+                          cattle_tcm%> TCM
+                        </div>
+                      </div>
+                    </div>
+                    <!-- NEW  -->
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 38px;
+                      "
+                    >
+                      <div>
+                        <img
+                          height="50px"
+                          width="50px"
+                          alt="sheep"
+                          src="<%=sheep_green_img%>"
+                        />
+                      </div>
+
+                      <div
+                        style="margin-left: 18px; font-size: 14px; color:'#287C78"
+                      >
+                        <div style="margin-bottom: 5px">
+                          Sheep
+                          <span style="font-size: 9px"
+                            >(<%= total_sheep%>)</span
+                          >
+                        </div>
+                        <div style="font-weight: bold">
+                          <%= total_sheep_water_consumption%>% - <%= sheep_tcm%>
+                          TCM
+                        </div>
+                      </div>
+                    </div>
+                    <!-- NEW  -->
+
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 38px;
+                      "
+                    >
+                      <div>
+                        <img
+                          height="45px"
+                          width="45px"
                           alt="poultry"
-                          src="<%=poultry_img%>"
+                          src="<%=poultry_red_img%>"
                         />
                       </div>
 
                       <div
-                        style="
-                          text-align: center;
-                          font-size: 22px;
-                          font-weight: bold;
-                        "
+                        style="margin-left: 18px; font-size: 14px; color:'#287C78"
                       >
-                        <%= total_poultry_water_consumption%>%
+                        <div style="margin-bottom: 5px">
+                          Poultry
+                          <span style="font-size: 9px"
+                            >(<%= total_poultry%>)</span
+                          >
+                        </div>
+                        <div style="font-weight: bold">
+                          <%= total_poultry_water_consumption%>% - <%=
+                          poultry_tcm%> TCM
+                        </div>
                       </div>
-                      <div>Poultry</div>
                     </div>
-                    <div>
-                      <div style="height: 65px">
-                        <!-- <img
-                          src="/images/industries7.svg"
-                          height="50px"
-                          alt="humans"
-                        /> -->
-                        <img
-                          height="50px"
-                          alt="humans"
-                          src="<%=industries_img%>"
-                        />
-                      </div>
-
-                      <div
-                        style="
-                          text-align: center;
-                          font-size: 22px;
-                          font-weight: bold;
-                        "
-                      >
-                        <%= total_industry_water_consumption %>%
-                      </div>
-                      <div>Industries</div>
-                    </div>
+                    <!-- -----new ends----- -->
                   </div>
-                  <!-- div one  -->
-
-                  <!-- div two starts  -->
-                  <div style="margin-top: 30px; margin-bottom: 30px">
-                    Who have a population of,
-                  </div>
-
-                  <div
-                    style="
-                      padding: 2px 12px;
-                      display: flex;
-                      justify-content: space-between;
-                      color: #6e8482;
-                    "
-                  >
-                    <div>
-                      <div style="font-size: 22px; font-weight: bold">
-                        <%= total_human%>
-                      </div>
-                    </div>
-                    <div>
-                      <div style="font-size: 22px; font-weight: bold">
-                        <%= total_cattle%>
-                      </div>
-                    </div>
-                    <div>
-                      <div style="font-size: 22px; font-weight: bold">
-                        <%= total_sheep%>
-                      </div>
-                    </div>
-                    <div>
-                      <div style="font-size: 22px; font-weight: bold">
-                        <%= total_poultry%>
-                      </div>
-                    </div>
-                    <div>
-                      <div style="font-size: 22px; font-weight: bold">
-                        <%= total_industry%>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- div two ends -->
                 </div>
               </div>
             </div>

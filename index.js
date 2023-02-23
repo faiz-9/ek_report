@@ -118,6 +118,11 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     map_values_summer: constants.map_values_summer,
 
     // page 7 images
+    humans_blue_img: images.humans_blue_img,
+    cattle_orange_img: images.cattle_orange_img,
+    sheep_green_img: images.sheep_green_img,
+    poultry_red_img: images.poultry_red_img,
+
     humans_img: images.humans_img,
     cattle_img: images.cattle_img,
     sheep_img: images.sheep_img,
@@ -139,6 +144,12 @@ fs.readFile('./variables/index.ejs', 'utf8', (err, data) => {
     total_sheep: constants.total_sheep,
     total_poultry: constants.total_poultry,
     total_industry: constants.total_industry,
+
+    human_tcm: constants.human_tcm,
+    cattle_tcm: constants.cattle_tcm,
+    sheep_tcm: constants.sheep_tcm,
+    poultry_tcm: constants.poultry_tcm,
+    total_village_population: constants.total_village_population,
 
     // page 8 images
     green_surfacewater_img: images.green_surfacewater_img,
